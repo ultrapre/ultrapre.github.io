@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2019-06-11-简书md文件下载图片到本地并且更新引用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2019-06-11-简书md文件下载图片到本地并且更新引用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-06-11-简书md文件下载图片到本地并且更新引用">
+<meta property="og:url" content="http://yoursite.com/2019/06/11/2019-06-11-简书md文件下载图片到本地并且更新引用/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019-06-11-简书md文件下载图片到本地并且更新引用">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-12T15:37:54.843Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-06-11-简书md文件下载图片到本地并且更新引用">
+<meta name="twitter:description" content="2019-06-11-简书md文件下载图片到本地并且更新引用">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-06-11-简书md文件下载图片到本地并且更新引用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/11/2019-06-11-简书md文件下载图片到本地并且更新引用/" class="article-date">
+  <time datetime="2019-06-11T07:17:43.000Z" itemprop="datePublished">2019-06-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2019-06-11-简书md文件下载图片到本地并且更新引用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2019-06-11-简书md文件下载图片到本地并且更新引用</p>
+<a id="more"></a>
+<p>作者：<a href="https://www.jianshu.com/u/f068003ac3b7" target="_blank" rel="noopener">https://www.jianshu.com/u/f068003ac3b7</a></p>
+<p>用途：在你下载了简书打包的文章后，markdown文件里面引用的图片链接是简书的在线源。本Python脚本的作用就是将包含子文件夹的文件夹内所有.md文件内简书源的图片下载到./img相对路径内，并且替换.md文件内图片链接为本地源。原创不易，转载请注明<a href="https://www.jianshu.com/u/f068003ac3b7" target="_blank" rel="noopener">出处</a>。</p>
+<p>用法：将dirlist(“G:/报告/简书/user-XXXXXXX”,[])中”G:/报告/简书/user-XXXXXXX”替换为你的简书文章打包根目录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">#conding=utf8</span><br><span class="line">import os</span><br><span class="line">import re</span><br><span class="line">import requests</span><br><span class="line"></span><br><span class="line">def dlfile(path , file):</span><br><span class="line"></span><br><span class="line">    if not os.path.isdir(path+&quot;/img&quot;):</span><br><span class="line">        os.makedirs(path+&quot;/img&quot;)</span><br><span class="line"></span><br><span class="line">    fp = open(file, &quot;r&quot;, encoding=&quot;utf-8&quot;)  # 打开你要写得文件</span><br><span class="line">    lines = fp.readlines()  # 打开文件，读入每一行</span><br><span class="line">    for s in lines:</span><br><span class="line">        p = re.compile(r&apos;!\[.*?\]\(https://upload-images(.*?)\)&apos;)</span><br><span class="line">        matchlist = p.findall(s)</span><br><span class="line">        for eve in matchlist:</span><br><span class="line">            if eve != &quot;&quot;:</span><br><span class="line">                eveurl = &quot;https://upload-images&quot; + eve</span><br><span class="line">                eveimg = re.search(&quot;https://upload-images\.jianshu\.io/upload_images/(.*?)\?&quot;, eveurl).group(1)  # 123</span><br><span class="line">                print(eveimg)</span><br><span class="line">                f = requests.get(eveurl)</span><br><span class="line">                # 下载文件</span><br><span class="line">                with open(path+&quot;/img/&quot; + eveimg, &quot;wb&quot;) as code:</span><br><span class="line">                    code.write(f.content)</span><br><span class="line">    fp.close()  # 关闭文件</span><br><span class="line"></span><br><span class="line">def repline(file):</span><br><span class="line">    lines = open(file,&quot;r&quot;,encoding=&quot;utf-8&quot;).readlines()</span><br><span class="line">    fp = open(file,&quot;w&quot;,encoding=&quot;utf-8&quot;)  #打开你要写得文件</span><br><span class="line">    for s in lines:</span><br><span class="line">        q = s.replace(&quot;2019-06-11-简书md文件下载图片到本地并且更新引用/&quot;, &quot;img\\&quot;).replace(</span><br><span class="line">            &quot;&quot;, &quot;&quot;)</span><br><span class="line">        fp.write(q)</span><br><span class="line">    fp.close()  # 关闭文件</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def readjianshu(filepath):</span><br><span class="line">    print(filepath)</span><br><span class="line">    path = re.search(&quot;(.*)/(.*?)$&quot;, filepath).group(1)</span><br><span class="line">    dlfile(path, filepath)</span><br><span class="line">    repline(filepath)</span><br><span class="line">    print(&quot;finish&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def dirlist(path, allfile):</span><br><span class="line">    filelist = os.listdir(path)</span><br><span class="line"></span><br><span class="line">    for filename in filelist: #广义</span><br><span class="line">        filepath = os.path.join(path, filename)</span><br><span class="line">        if os.path.isdir(filepath):</span><br><span class="line">            dirlist(filepath, allfile)</span><br><span class="line"></span><br><span class="line">        elif filepath.endswith(&quot;md&quot;):</span><br><span class="line"></span><br><span class="line">            filepath = filepath.replace(&quot;\\&quot;,&quot;/&quot;)</span><br><span class="line">            allfile.append(filepath)</span><br><span class="line">            readjianshu(filepath)</span><br><span class="line">    return allfile</span><br><span class="line"></span><br><span class="line">dirlist(&quot;G:/报告/简书/user-XXXXXXX&quot;,[])</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/06/11/2019-06-11-简书md文件下载图片到本地并且更新引用/" data-id="cjz8kurxs001kvsuekwmk274e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/06/13/2019-06-13-Linux和Win你选择什么？WinToGo-&-Hackintosh-&-Pack/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019-06-13-Linux和Win你选择什么？WinToGo-&amp;-Hackintosh-&amp;-Pack
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/10/2019-06-10-Vmware磁盘高占用问题(unsolved)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019-06-10-Vmware磁盘高占用问题(unsolved)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/12/post-tst2/">post_tst2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/mypost-tst/">mypost_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/pic-tst/">pic_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/playGame/">playGame</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/Galgame-Tst/">Galgame_Tst</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

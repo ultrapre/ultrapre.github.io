@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2019-07-30-计划定时任务学习 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2019-07-30-计划定时任务学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-07-30-计划定时任务学习">
+<meta property="og:url" content="http://yoursite.com/2019/07/30/2019-07-30-计划定时任务学习/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019-07-30-计划定时任务学习">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-12T15:37:55.064Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-07-30-计划定时任务学习">
+<meta name="twitter:description" content="2019-07-30-计划定时任务学习">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-07-30-计划定时任务学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/30/2019-07-30-计划定时任务学习/" class="article-date">
+  <time datetime="2019-07-30T07:17:43.000Z" itemprop="datePublished">2019-07-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2019-07-30-计划定时任务学习
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2019-07-30-计划定时任务学习</p>
+<a id="more"></a>
+<p>1.批处理计划<br>计划定时任务这块还没研究，虽然有很多第三方软件可以实现，还是学学朴素的cmd计划定时任务吧</p>
+<p>应用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">schtasks /create /sc minute /mo 2 /sd 2019/07/30 /st 11:35:00 /tn &quot;AA-dism++&quot; /tr &quot;E:\PORTABLE\Dism++10.1.1000.52B_a776198fccaa9cfdd591bd08de22205ceb0cc45f\Dism++x64.exe&quot;  /ed 2019/07/31</span><br><span class="line">schtasks /create /sc minute /mo 2 /sd 2019/07/30 /st 11:35:00 /tn &quot;AA-cmd&quot; /tr &quot;C:\Windows\System32\cmd.exe&quot;  /ed 2019/07/31</span><br><span class="line">schtasks /create /sc minute /mo 2 /sd 2019/07/30 /st 11:35:00 /tn &quot;AA-sniff&quot; /tr &quot;C:/BACKUP/硬盘扫描图形化/spacesniffer_ha/SpaceSniffer v1.3.0.2_CHS.exe&quot;  /ed 2019/07/31</span><br><span class="line">SCHTASKS /Delete /TN &quot;AA-dism++&quot;</span><br><span class="line">y</span><br><span class="line">SCHTASKS /Delete /TN &quot;AA-cmd&quot;</span><br><span class="line">y</span><br><span class="line">SCHTASKS /Delete /TN &quot;AA-sniff&quot;</span><br><span class="line">y</span><br><span class="line">SCHTASKS /Delete /TN &quot;AA-tsk&quot;</span><br><span class="line">y</span><br></pre></td></tr></table></figure>
+
+<p>（1）.开始日期时间在以前没关系。ed不能&lt;=sd<br>（2）.硬盘</p>
+<p>2.winrar定时备份方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;C:\Program Files\WinRAR\WinRAR.exe&quot; u -hp&quot;pwd&quot; -sl52428800 -r all_doc.rar .\*.doc .\*.docx</span><br><span class="line">&quot;C:\Program Files\WinRAR\WinRAR.exe&quot; x -hp&quot;pwd&quot; -o- all_doc.rar G:\【保留】工作文档\Word</span><br><span class="line">&quot;C:\Program Files\WinRAR\WinRAR.exe&quot; x -hp&quot;pwd&quot; -o+ all_doc.rar G:\【更新】工作文档\Word</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.cnblogs.com/fetty/p/4769279.html" target="_blank" rel="noopener">https://www.cnblogs.com/fetty/p/4769279.html</a></p>
+<p>-or（冲突重命名<br>-o+（冲突覆盖<br>-o-（冲突跳过<br>-hp加密文件名（*.rar有效<br>-dr复制后删除到回收站<br>103   t             压缩文件后测试文件<br>104   ta<date>      处理在 &lt;日期&gt; 之后修改过的文件，以 YYYYMMDDHHMMSS 格式<br>105   tb<date>      处理在 &lt;日期&gt; 之前修改过的文件，以 YYYYMMDDHHMMSS 格式<br>106   tk            保存原来的压缩文件时间<br>107   tl            设置压缩文件时间为最新的文件<br>108   tn<time>      处理比 &lt;时间&gt; 较新的文件<br>109   to<time>      处理比 &lt;时间&gt; 较旧的文件<br>110   ts&lt;m,c,a&gt;[N]  保存或恢复文件时间（修改，创建，访问）</time></time></date></date></p>
+<p>3.关于winrar筛选目录内文件类型速度过慢的方法</p>
+<p>winrar递归搜索硬盘IO太慢，因此大备份用everything导出txt，然后运行宏，复制自行 操作完成</p>
+<p>因此需要提醒工具，提醒你去做备份。</p>
+<p>结合人工和自动，才是上策。</p>
+<p>人工可以培养习惯</p>
+<p>进阶：培养分类文件夹的好习惯和文件名规范命名</p>
+<p>4.总结</p>
+<p>copy 新的加密rar Onedrive</p>
+<p>结合Onedrive自动上传策略</p>
+<p>小文件拷贝策略：使用工具FastCopy.exe</p>
+<p>重新调整分区，对需要大量零碎文件和工作文件、重要文件进行不同分区划分。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/30/2019-07-30-计划定时任务学习/" data-id="cjz8kurzi002jvsue7m60zgb5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/30/2019-07-30-RamOS与PE与WTG/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019-07-30-RamOS与PE与WTG
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/29/2019-07-29/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Mon Jul 29 2019 00:00:00 GMT+0900 (GMT+09:00)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/12/post-tst2/">post_tst2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/mypost-tst/">mypost_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/pic-tst/">pic_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/playGame/">playGame</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/Galgame-Tst/">Galgame_Tst</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

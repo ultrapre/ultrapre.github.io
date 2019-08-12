@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2019-07-05-硬盘测试备份设计计划 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2019-07-05-硬盘测试备份设计计划">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-07-05-硬盘测试备份设计计划">
+<meta property="og:url" content="http://yoursite.com/2019/07/05/2019-07-05-硬盘测试备份设计计划/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019-07-05-硬盘测试备份设计计划">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-12T15:37:54.963Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-07-05-硬盘测试备份设计计划">
+<meta name="twitter:description" content="2019-07-05-硬盘测试备份设计计划">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-07-05-硬盘测试备份设计计划" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/05/2019-07-05-硬盘测试备份设计计划/" class="article-date">
+  <time datetime="2019-07-05T07:17:43.000Z" itemprop="datePublished">2019-07-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2019-07-05-硬盘测试备份设计计划
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2019-07-05-硬盘测试备份设计计划</p>
+<a id="more"></a>
+<p>!此计划继承 2019-05-23 硬盘风险模拟测试计划</p>
+<p>测试目的：排空半数空间然后侧重恢复生态或者离线生态，提出系统方案</p>
+<p>测试要求：需要重要度区分</p>
+<p>历史回顾：</p>
+<p>1.多地备份</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;H:/win10_0629.wim&quot; 完好</span><br><span class="line">&quot;O:/win10_0609.wim&quot; 完好</span><br><span class="line">&quot;O:/win10_0523.wim&quot;  Path恢复，各类软件翻新</span><br><span class="line">&quot;O:/win10-0422.wim&quot; </span><br><span class="line">&quot;O:/win7_important.wim&quot; 机房OS</span><br></pre></td></tr></table></figure>
+
+<p>2.云存储<br>坚果云、Onedrive：完好</p>
+<p>#防灾备份顺序：<br>1.绝对重要的文件清单先备份：多地+云存储</p>
+<p>2.Snap2HTML全扫描</p>
+<p>3.分系统备份：Deepin</p>
+<p>4.依据盘符存放文件重要度进行多地备份</p>
+<p>5.维护：多软件环境维护</p>
+<p>6.生态检查（此内容已经不甚重要）<br><code>内挂（C:）靠全盘 外挂靠列表/机房系统/pmf备份 [list] VM系列 Ubuntu Vivado Qt EF盘绿色软件</code></p>
+<p>#预防内容：</p>
+<p>1.搬移C盘中不需要速度、需要备份的诸如代码转移</p>
+<p>2.完善自行研发/查找到的备份策略</p>
+<p>3.硬盘岌岌可危，实践第一要义</p>
+<p>#实际操作</p>
+<p>1.转移H学习资料（整理时 查找度&gt;区分度 ）</p>
+<p>2.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/05/2019-07-05-硬盘测试备份设计计划/" data-id="cjz8kuryj001zvsue3llqwodp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/08/2019-07-08-安卓深入系统分区清理总空间/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019-07-08-安卓深入系统分区清理总空间
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/01/2019-07-01-华硕W519L固态硬盘安装以及重装系统方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019-07-01-华硕W519L固态硬盘安装以及重装系统方法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/12/post-tst2/">post_tst2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/mypost-tst/">mypost_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/pic-tst/">pic_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/playGame/">playGame</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/Galgame-Tst/">Galgame_Tst</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

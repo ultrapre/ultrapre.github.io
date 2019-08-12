@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2019-08-10-Gal反汇编指南 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2019-08-10-Gal反汇编指南">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-08-10-Gal反汇编指南">
+<meta property="og:url" content="http://yoursite.com/2019/08/10/2019-08-10-Gal反汇编指南/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019-08-10-Gal反汇编指南">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/08/10/2019-08-10-Gal反汇编指南/14039561-19c5c50dc90d4707.png">
+<meta property="og:updated_time" content="2019-08-12T15:37:55.159Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-08-10-Gal反汇编指南">
+<meta name="twitter:description" content="2019-08-10-Gal反汇编指南">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/10/2019-08-10-Gal反汇编指南/14039561-19c5c50dc90d4707.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-08-10-Gal反汇编指南" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/10/2019-08-10-Gal反汇编指南/" class="article-date">
+  <time datetime="2019-08-10T07:17:43.000Z" itemprop="datePublished">2019-08-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2019-08-10-Gal反汇编指南
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2019-08-10-Gal反汇编指南</p>
+<a id="more"></a>
+<p>进度表：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>完成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cs2特制补丁</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>解包剧本</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>go编译开源工具</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>OD语区修改</td>
+<td>〇</td>
+</tr>
+<tr>
+<td>OD边界检查</td>
+<td>〇</td>
+</tr>
+</tbody></table>
+<p>#<a href="https://shinyashimokawa.space/index.php/archives/373/" target="_blank" rel="noopener">教程&amp;案例一</a></p>
+<p>前面照着来就行了。</p>
+<p>补充：Go 安装 golang.org/x/text 出错</p>
+<p><code>mkdir -p $GOPATH/src/golang.org/x</code><br>cd $GOPATH/src/golang.org/x<br>git clone <a href="https://github.com/golang/text.git" target="_blank" rel="noopener">https://github.com/golang/text.git</a></p>
+<p>就把这个录成了视频<br>Ollydbg修改字符编码和边界检查代码.mp4</p>
+<p><a href="https://github.com/ultrapre/GalHex" target="_blank" rel="noopener">工具地址</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">0051217E  |.  3C 81         cmp al,0x81</span><br><span class="line">00512180  |.  72 04         jb short cs2.00512186</span><br><span class="line">00512182      3C 9F         cmp al,0x9F</span><br><span class="line">00512184      76 08         jbe short cs2.0051218E</span><br><span class="line">00512186  |&gt;  3C E0         cmp al,0xE0</span><br><span class="line">00512188  |.  72 1D         jb short cs2.005121A7</span><br><span class="line">0051218A  |.  3C EF         cmp al,0xEF</span><br><span class="line">0051218C  |.  77 19         ja short cs2.005121A7</span><br><span class="line">0051218E  |&gt;  8A41 01       mov al,byte ptr ds:[ecx+0x1]</span><br><span class="line">00512191  |.  3C 40         cmp al,0x40</span><br><span class="line">00512193  |.  72 04         jb short cs2.00512199</span><br><span class="line">00512195      3C 7E         cmp al,0x7E</span><br><span class="line">00512197  |.  76 08         jbe short cs2.005121A1</span><br><span class="line">00512199  |&gt;  3C 80         cmp al,0x80</span><br><span class="line">0051219B  |.  72 0A         jb short cs2.005121A7</span><br><span class="line">0051219D      3C FC         cmp al,0xFC</span><br><span class="line">0051219F  |.  77 06         ja short cs2.005121A7</span><br></pre></td></tr></table></figure>
+
+<p>检查的含义大概如下：<br>（xor代表出错，mov 1 代表成功）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">第一字节：</span><br><span class="line"></span><br><span class="line">81-:xor</span><br><span class="line"></span><br><span class="line">81-9F:下一字节检查</span><br><span class="line"></span><br><span class="line">9F-E0:xor</span><br><span class="line"></span><br><span class="line">EF+:xor</span><br><span class="line"></span><br><span class="line">E0-EF:下一字节检查</span><br><span class="line"></span><br><span class="line">----</span><br><span class="line"></span><br><span class="line">第二字节：</span><br><span class="line"></span><br><span class="line">40-:xor</span><br><span class="line"></span><br><span class="line">40-7E:完成</span><br><span class="line"></span><br><span class="line">7E-80:xor</span><br><span class="line"></span><br><span class="line">FC+:xor</span><br><span class="line"></span><br><span class="line">80-FC:完成</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><a href="https://shera.iteye.com/blog/409666" target="_blank" rel="noopener">hint</a></p>
+<p>当修改上界9F和7E为FE之后即可检查成功。 </p>
+<p>说完第一个案例之后，说说第二个吧。</p>
+<p>#<a href="https://blog.csdn.net/luozhuang/article/details/3260235" target="_blank" rel="noopener">案例二</a></p>
+<p>相关的文章：</p>
+<p><a href="https://blog.csdn.net/luozhuang/article/details/3250510" target="_blank" rel="noopener">基础</a></p>
+<p><a href="https://blog.csdn.net/luozhuang/article/details/3260112" target="_blank" rel="noopener">内功提高篇</a></p>
+<p><a href="https://blog.csdn.net/luozhuang/article/details/3159514" target="_blank" rel="noopener">工具</a></p>
+<p><a href="https://blog.csdn.net/luozhuang/article/details/3260277" target="_blank" rel="noopener">真相大白</a></p>
+<p>关于内存写入部分，需要辅助学习的就是 OllyDbg入门完全教程.pdf 和 OD入门系列图文详细教程.pdf。</p>
+<p>掌握汇编之后，还需要API（MSDN文档）</p>
+<p>一般来说，解包封包可能都有写的了，就是一些工具可能需要自己实现。</p>
+<blockquote>
+<p>EnumFontFamiliesEx就是初始化 选择字体的函数，告诉程序有那些字体可用，CreateFont 用来创造字体<br>其中也包括  character set<br>这些就是要修改的 BOSS<br>总的来说就是要修改程序的 CreateFont 或者CreateFontIndirect 还有EnumFontFamiliesEx<br>将character set 改为 中文，这样染红就可以显示中文了</p>
+</blockquote>
+<p>针对读取外部配置，大佬说了用Process Monitor。启动 capture EVEN 捕捉事件，最后就搞明白了。</p>
+<p>#<a href="https://bbs.sumisora.net/read.php?tid=206511&fpage=0&toread=&page=1" target="_blank" rel="noopener">ONE ～輝く季節へ FullVoice 汉化实战篇[完]</a></p>
+<p>这里由于较早，都是自己造轮子。</p>
+<blockquote>
+<p>用Ollydbg调试游戏程序one.exe并在调用ReadFile处下断点，分析读取one.lst或soundPackSEVo.lst后的数据处理（具体的操作不作说明），可以得出lst文件的解密方法如下</p>
+</blockquote>
+<p>参照这段文字，可知Ollydbg调用资源的过程就可以解答如何解包了。关键就是，如何调用ReadFile？另外，搜索所有的参考文本字符串ogg。</p>
+<p>解包基本都有工具完成了。后面就是解密。解密也还是可以用OD。</p>
+<p>汉化这个脚本就是要把日文的文本替换成中文的翻译文本，同时把文本的长度换成翻译后的实际长度。</p>
+<p>程序内文字修改：长度比原文短的用00填充，但不可以超出原文的长度。</p>
+<p>MSDN查询手册：</p>
+<p><a href="https://docs.microsoft.com/en-us/windows/win32/api/wingdi/nf-wingdi-createfontindirecta" target="_blank" rel="noopener">createfontindirecta</a></p>
+<p><a href="https://docs.microsoft.com/zh-cn/windows/win32/apiindex/api-index-portal" target="_blank" rel="noopener">win32 api-index-portal</a></p>
+<p><a href="https://msdn.microsoft.com/library" target="_blank" rel="noopener">library</a></p>
+<p>字符集比较绕，<br>游戏中调用的系统函数CreateFontIndirectA需要传入调用的参数，参数LOGFONT里面有lfCharSet，在程序的exe里面就有80这个值，作为传入的参数结构体中的lfCharSet。改写成86就能让程序自己传入86。CreateFontIndirectA参考上设置断点就是让程序在调用这个函数时停下来让程序员找到80的地方。博主定位这个传入的方法是写入自己的ASCII字符串定位，而其他则是肉眼找。mov byte ptr ds:[ebx+17],80是变址寻址。</p>
+<p><img src="/2019/08/10/2019-08-10-Gal反汇编指南/14039561-19c5c50dc90d4707.png" alt="image.png"></p>
+<hr>
+<p>以上就是基本流传广泛的几种常见策略。下面是一些不那么容易找的资料。</p>
+<p>#<a href="https://github.com/MewX/cross-channel_chinese-localization_project" target="_blank" rel="noopener">大作业</a></p>
+<p>未开始。。。</p>
+<p>#<a href="https://bbs.sumisora.net/read.php?tid=10916692" target="_blank" rel="noopener">文件读写<em>精\</em></a></p>
+<p>正在完成。。。</p>
+<p><a href="https://lellansin.wordpress.com/2013/04/24/windows-api%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" target="_blank" rel="noopener">配合此文更佳</a></p>
+<p><a href="https://www.cnblogs.com/17bdw/p/8453241.html" target="_blank" rel="noopener">配合此文更佳</a></p>
+<p>#<a href="https://bbs.sumisora.net/read.php?tid=11042351" target="_blank" rel="noopener">BGI实战</a></p>
+<p>未开始。。。</p>
+<p><a href="https://github.com/Inori/FuckGalEngine" target="_blank" rel="noopener">聚聚一</a></p>
+<p><a href="https://zhidao.baidu.com/question/569077894.html" target="_blank" rel="noopener">聚聚二</a></p>
+<p><a href="https://bbs.pediy.com/thread-8899.htm" target="_blank" rel="noopener">OllyDbg中文帮助文档</a></p>
+<hr>
+<p>没意义的</p>
+<p><a href="https://zhidao.baidu.com/question/569077894.html" target="_blank" rel="noopener">某</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/10/2019-08-10-Gal反汇编指南/" data-id="cjz8kus01002svsue6roq2slj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/10/2019-08-10-Git简记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019-08-10-Git简记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/10/2019-08-10-把System32删掉，总之M$就是不行！/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019-08-10-把System32删掉，总之M$就是不行！</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/12/post-tst2/">post_tst2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/mypost-tst/">mypost_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/pic-tst/">pic_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/playGame/">playGame</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/Galgame-Tst/">Galgame_Tst</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

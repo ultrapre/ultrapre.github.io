@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2019-08-05-Windows程序窗口管控 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2019-08-05-Windows程序窗口管控">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-08-05-Windows程序窗口管控">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/2019-08-05-Windows程序窗口管控/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019-08-05-Windows程序窗口管控">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/08/05/2019-08-05-Windows程序窗口管控/14039561-c903b7cb550a5e52.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/05/2019-08-05-Windows程序窗口管控/14039561-591fc02beb9ceb8c.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/05/2019-08-05-Windows程序窗口管控/14039561-e5bed52a709f2d5b.png">
+<meta property="og:updated_time" content="2019-08-12T15:37:55.137Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-08-05-Windows程序窗口管控">
+<meta name="twitter:description" content="2019-08-05-Windows程序窗口管控">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/05/2019-08-05-Windows程序窗口管控/14039561-c903b7cb550a5e52.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-08-05-Windows程序窗口管控" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/05/2019-08-05-Windows程序窗口管控/" class="article-date">
+  <time datetime="2019-08-05T07:17:43.000Z" itemprop="datePublished">2019-08-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2019-08-05-Windows程序窗口管控
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2019-08-05-Windows程序窗口管控</p>
+<a id="more"></a>
+<p>自从上次写了windows窗口初探、尝试了调用windows api实现了窗口内嵌之后，又找到了比较新颖的玩意儿。还是关于窗口与桌面的，不过实用性好多了。</p>
+<p>闲时总是想找点可以实现奇异功能的软件来玩玩，比如能不能把一个第三方程序嵌入到chrome的页面里面运行啥的，实现“浏览器”形态化的桌面。又想了一个点子，比如把第三方程序窗口组合成tab形式这样的？把默认的桌面概念给去掉？后来还真找到了比较丰富的玩法。</p>
+<p>1.第一个找到的是“窗口布局”、“窗口管理”这种关键词。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/33722847" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/33722847</a></p>
+<p>AquaSnap，MaxTo，DisplayFusion<br>就上手体验来说，AquaSnap不错</p>
+<p>移来移去的那些功能我不是很感冒，毕竟aero？也实现了。比较震惊的是下图。鼠标快捷方式。洋文不难看懂吧。这还可以把一个一般程序直接隐藏到tray托盘。上次让我倍感亲切的做法是Listary的自动记录打开文件和目录功能了，不过Listary的空白双击弹出快捷菜单不喜欢，后来才会设置，就一直保留到开机项目了。</p>
+<p><img src="/2019/08/05/2019-08-05-Windows程序窗口管控/14039561-c903b7cb550a5e52.png" alt="image.png"></p>
+<p><a href="https://www.lizhi.io/review/12741902" target="_blank" rel="noopener">https://www.lizhi.io/review/12741902</a></p>
+<p>既然AquaSnap的布局都不让我感冒，那MaxTo就更没意义了。MaxTo适合那种需要大量工作的，稳定布局的人。</p>
+<p>DisplayFusion花里胡哨还是有点感兴趣，不过我觉得对多屏幕更有用。比较感兴趣的是触发器和兼容性的设置。其中兼容性可以设置全局标题栏关闭这种。触发器会崩也就没多设置。</p>
+<p>2.标签式程序管控TidyTabs</p>
+<p>这个软件非常给力了。操作上，基本上只要记住排除chrome和学会始终显示标签即可，看下视频都会了。</p>
+<p><a href="https://www.lizhi.io/blog/manage-windows-with-tags-tidytabs" target="_blank" rel="noopener">https://www.lizhi.io/blog/manage-windows-with-tags-tidytabs</a></p>
+<p>3.系列筛选</p>
+<p><a href="https://www.bbsmax.com/A/Gkz1DD12dR/" target="_blank" rel="noopener">某些清单</a></p>
+<p>这次咋主要挑没见过的看。<br>nTrun感觉割裂性太强，一个单独的带有UI的启动器哪里比得上万能的autohotkey呢？</p>
+<p>QuickLook 空格键预览：个人不经常使用预览功能，跳过。</p>
+<p>WGestures 全局鼠标手势工具：和ahk功能有冲突，况且个人是偏爱键盘操作的，鼠标就免了。<br><img src="/2019/08/05/2019-08-05-Windows程序窗口管控/14039561-591fc02beb9ceb8c.png" alt="image.png"></p>
+<p>NetSpeedMonitor和TrafficMonitor:可以用，没必要。千兆网已经弱化了需要看网速来消磨时间的癖好了。</p>
+<p>杂项——</p>
+<p>MacType：字体美化</p>
+<p>Fences：已经在用</p>
+<p>Rainmeter：喧宾夺主，有空看看</p>
+<p>4.【升级】接管Windows桌面、windows程序窗口接管</p>
+<p>信息亭模式</p>
+<p><a href="https://docs.microsoft.com/zh-cn/windows/configuration/kiosk-methods" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/windows/configuration/kiosk-methods</a></p>
+<p><a href="https://social.msdn.microsoft.com/Forums/fr-FR/391d0ff5-8e45-4030-93b4-70e2646831d6/22914203093575336719202142942021344win1025805203163199532479?forum=window10app" target="_blank" rel="noopener">https://social.msdn.microsoft.com/Forums/fr-FR/391d0ff5-8e45-4030-93b4-70e2646831d6/22914203093575336719202142942021344win1025805203163199532479?forum=window10app</a></p>
+<p>5.模拟window桌面实现</p>
+<p><a href="http://www.cppblog.com/kesalin/archive/2008/02/23/43124.aspx" target="_blank" rel="noopener">http://www.cppblog.com/kesalin/archive/2008/02/23/43124.aspx</a></p>
+<p><a href="http://www.cppblog.com/Files/kesalin/DesktopWindow.rar" target="_blank" rel="noopener">下载</a></p>
+<p>意思就是一个程序窗口显示桌面的图标，但是不是像资源管理器那样排布，而是贴近原生桌面样式，可运行可右键。</p>
+<p><img src="/2019/08/05/2019-08-05-Windows程序窗口管控/14039561-e5bed52a709f2d5b.png" alt="image.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/05/2019-08-05-Windows程序窗口管控/" data-id="cjz8kurzx002qvsue68se4n7n" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/08/2019-08-08-二十年弹指挥间，天文盛宴何时再来/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019-08-08-二十年弹指挥间，天文盛宴何时再来
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/04/2019-08-04-开源的力量/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019-08-04-开源的力量</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/12/post-tst2/">post_tst2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/mypost-tst/">mypost_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/pic-tst/">pic_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/playGame/">playGame</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/Galgame-Tst/">Galgame_Tst</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

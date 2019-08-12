@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2019-06-05-又是谈到烂的程序Automatic | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2019-06-05-又是谈到烂的程序Automatic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-06-05-又是谈到烂的程序Automatic">
+<meta property="og:url" content="http://yoursite.com/2019/06/05/2019-06-05-又是谈到烂的程序Automatic/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019-06-05-又是谈到烂的程序Automatic">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-12T15:37:54.808Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-06-05-又是谈到烂的程序Automatic">
+<meta name="twitter:description" content="2019-06-05-又是谈到烂的程序Automatic">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-06-05-又是谈到烂的程序Automatic" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/05/2019-06-05-又是谈到烂的程序Automatic/" class="article-date">
+  <time datetime="2019-06-05T07:17:43.000Z" itemprop="datePublished">2019-06-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2019-06-05-又是谈到烂的程序Automatic
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2019-06-05-又是谈到烂的程序Automatic</p>
+<a id="more"></a>
+<p>Mark Keyword<br>自从写了ahk有点飘飘然，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">!n::</span><br><span class="line">&#123;</span><br><span class="line">Process, Exist , 8021x.exe</span><br><span class="line">if ErrorLevel &#123;</span><br><span class="line">Process, Close , 8021x.exe</span><br><span class="line">msgbox,  , NETWORK, SHUTDOWN, 0.1</span><br><span class="line">return</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">run &quot;C:\Program Files\锐捷网络\Ruijie Supplicant\RuijieSupplicant.exe&quot;</span><br><span class="line">msgbox,  , NETWORK, OPEN, 0.5</span><br><span class="line">return</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>C#<br>windows API</p>
+<p>关键字：windows 自动化 运维</p>
+<p>1.web<br>窗口auto先放下，说说web自动化</p>
+<p><a href="https://github.com/tonglei100/sweetest" target="_blank" rel="noopener">https://github.com/tonglei100/sweetest</a><br>pip安装sweetest之后，照样例生成sample，补齐各种包，比如pywin32<br>chromedriver放到python3同目录下<br>可测试，自己修改样例等待。</p>
+<p>2.windows：<br>python win_app_ops.py -a stop -c notepad.xml<br>winform、C#</p>
+<p>C#原始编程<br>UrlDownloadToFile</p>
+<p>一. 要用python实现Windows窗口程序的自动化操作，可以用ctypes调用windows api来实现，还可以用 pywin32+pywinauto来实现，后者是别人造的轮子。</p>
+<p>3.ahk<br>macrocreator很罗嗦，好像功能又不乍得</p>
+<p>4.pywinauto<br>看了好一会测试完了，但是发现似乎不热？？而且spy++用的我发渗</p>
+<p><a href="https://www.cnblogs.com/wuxunyan/p/9366178.html" target="_blank" rel="noopener">https://www.cnblogs.com/wuxunyan/p/9366178.html</a></p>
+<p>5.回归本源，不如只找一个录制脚本<br><a href="http://www.hostguilds.com/ftp/index.php?action=downloadfile&filename=AutoScriptWriter.zip&directory=Autohotkey&PHPSESSID=kqlhrotig12bnj3albbdp3e4o2" target="_blank" rel="noopener">AutoScriptWriter.zip</a></p>
+<p>PuloversMacroCreator-Portable (1).zip</p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/06/05/2019-06-05-又是谈到烂的程序Automatic/" data-id="cjz8kurxi001dvsuecq55mrs9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/06/05/2019-06-05-鬼的捉迷藏小测/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019-06-05-鬼的捉迷藏小测
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/06/04/2019-06-04-Onedrive右键没有释放空间选项/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019-06-04-Onedrive右键没有释放空间选项</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/12/post-tst2/">post_tst2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/mypost-tst/">mypost_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/pic-tst/">pic_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/playGame/">playGame</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/Galgame-Tst/">Galgame_Tst</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

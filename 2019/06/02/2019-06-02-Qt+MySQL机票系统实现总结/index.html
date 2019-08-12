@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2019-06-02-Qt+MySQL机票系统实现总结 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2019-06-02-Qt+MySQL机票系统实现总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-06-02-Qt+MySQL机票系统实现总结">
+<meta property="og:url" content="http://yoursite.com/2019/06/02/2019-06-02-Qt+MySQL机票系统实现总结/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019-06-02-Qt+MySQL机票系统实现总结">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/06/02/2019-06-02-Qt+MySQL机票系统实现总结/14039561-834a4475fed2a468.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/02/2019-06-02-Qt+MySQL机票系统实现总结/14039561-666b717aebe7acb2.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/02/2019-06-02-Qt+MySQL机票系统实现总结/14039561-f61e2c656294fe53.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/02/2019-06-02-Qt+MySQL机票系统实现总结/14039561-ea5bd133297aefa8.png">
+<meta property="og:updated_time" content="2019-08-12T15:37:54.797Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-06-02-Qt+MySQL机票系统实现总结">
+<meta name="twitter:description" content="2019-06-02-Qt+MySQL机票系统实现总结">
+<meta name="twitter:image" content="http://yoursite.com/2019/06/02/2019-06-02-Qt+MySQL机票系统实现总结/14039561-834a4475fed2a468.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-06-02-Qt+MySQL机票系统实现总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/02/2019-06-02-Qt+MySQL机票系统实现总结/" class="article-date">
+  <time datetime="2019-06-02T07:17:43.000Z" itemprop="datePublished">2019-06-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2019-06-02-Qt+MySQL机票系统实现总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2019-06-02-Qt+MySQL机票系统实现总结</p>
+<a id="more"></a>
+<p>相比之前的读取txt文件模式，使用sql有方便也有不方便</p>
+<p>sql语句写死，注意构造sql对象不能重复占用</p>
+<p>sql配置设置为ini配置</p>
+<p>Qt打印的复杂，打印结果与关联显示控件有关，传参方法，以及打印结果<br>与</p><p>的不同，哈。。</p>
+<p>界面操作方面的重点：<br>tableWidget增加checkbox<br>dateEdit</p>
+<p>一些困扰：<br>万能的new QString() + “”到底变成什么对象？应该是QString &amp;<br>所以QString str不能=new QString()<br>而是new QString() + “”</p>
+<p>使用的旧模板：<br>多界面构造与show之前的工作<br>任务栏槽函数</p>
+<p><img src="/2019/06/02/2019-06-02-Qt+MySQL机票系统实现总结/14039561-834a4475fed2a468.png" alt="image.png"></p>
+<p><img src="/2019/06/02/2019-06-02-Qt+MySQL机票系统实现总结/14039561-666b717aebe7acb2.png" alt="image.png"></p>
+<p><img src="/2019/06/02/2019-06-02-Qt+MySQL机票系统实现总结/14039561-f61e2c656294fe53.png" alt="image.png"></p>
+<p><img src="/2019/06/02/2019-06-02-Qt+MySQL机票系统实现总结/14039561-ea5bd133297aefa8.png" alt="image.png"></p>
+<hr>
+<p>吐槽一下PC工作者失格</p>
+<p>1.不会装系统</p>
+<p>2.不做数据备份</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/06/02/2019-06-02-Qt+MySQL机票系统实现总结/" data-id="cjz8kurxd001avsueum33o0q7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/06/02/2019-06-02-新御宅日记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019-06-02-新御宅日记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/30/2019-05-30-【RAID大测试】-Vmware+Win7+Win2003Server/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019-05-30-【RAID大测试】-Vmware+Win7+Win2003Server</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/12/post-tst2/">post_tst2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/mypost-tst/">mypost_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/pic-tst/">pic_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/playGame/">playGame</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/Galgame-Tst/">Galgame_Tst</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

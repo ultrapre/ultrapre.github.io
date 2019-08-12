@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2019-08-02-C++控制台获取UTC和北京时间 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2019-08-02-C++控制台获取UTC和北京时间">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-08-02-C++控制台获取UTC和北京时间">
+<meta property="og:url" content="http://yoursite.com/2019/08/02/2019-08-02-C++控制台获取UTC和北京时间/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019-08-02-C++控制台获取UTC和北京时间">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/08/02/2019-08-02-C++控制台获取UTC和北京时间/14039561-0df12bf93324d2b1.png">
+<meta property="og:updated_time" content="2019-08-12T15:37:55.093Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-08-02-C++控制台获取UTC和北京时间">
+<meta name="twitter:description" content="2019-08-02-C++控制台获取UTC和北京时间">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/02/2019-08-02-C++控制台获取UTC和北京时间/14039561-0df12bf93324d2b1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-08-02-C++控制台获取UTC和北京时间" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/02/2019-08-02-C++控制台获取UTC和北京时间/" class="article-date">
+  <time datetime="2019-08-02T07:17:43.000Z" itemprop="datePublished">2019-08-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2019-08-02-C++控制台获取UTC和北京时间
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2019-08-02-C++控制台获取UTC和北京时间</p>
+<a id="more"></a>
+<p>代码来源 <a href="https://www.2cto.com/kf/201209/152988.html" target="_blank" rel="noopener">https://www.2cto.com/kf/201209/152988.html</a></p>
+<p><img src="/2019/08/02/2019-08-02-C++控制台获取UTC和北京时间/14039561-0df12bf93324d2b1.png" alt="image.png"></p>
+<p>如果IP不可用，参考<a href="https://tf.nist.gov/tf-cgi/servers.cgi" target="_blank" rel="noopener">https://tf.nist.gov/tf-cgi/servers.cgi</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line">// CSTget.cpp : 定义控制台应用程序的入口点。</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">#include &quot;stdafx.h&quot;</span><br><span class="line">#include &lt;winsock2.h&gt; </span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#pragma comment(lib, &quot;WS2_32&quot;)  // 链接到WS2_32.lib </span><br><span class="line">//using std;</span><br><span class="line"></span><br><span class="line">class CInitSock</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">	CInitSock(BYTE minorVer = 2, BYTE majorVer = 2)</span><br><span class="line">	&#123;</span><br><span class="line">		// 初始化WS2_32.dll </span><br><span class="line">		WSADATA wsaData;</span><br><span class="line">		WORD sockVersion = MAKEWORD(minorVer, majorVer);</span><br><span class="line">		if (::WSAStartup(sockVersion, &amp;wsaData) != 0)</span><br><span class="line">		&#123;</span><br><span class="line">			exit(0);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	~CInitSock()</span><br><span class="line">	&#123;</span><br><span class="line">		::WSACleanup();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//#include &quot;InitSock.h&quot; </span><br><span class="line">#include &lt;stdio.h&gt; </span><br><span class="line">CInitSock initSock;</span><br><span class="line"></span><br><span class="line">void SetTimeFromTP(ULONG ulTime)    // 根据时间协议返回的时间设置系统时间 </span><br><span class="line">&#123;</span><br><span class="line">	// Windows文件时间是一个64位的值，它是从1601年1月1日中午12:00到现在的时间间隔， </span><br><span class="line">	// 单位是1/1000 0000秒，即1000万分之1秒（100-nanosecond ） </span><br><span class="line">	FILETIME ft;</span><br><span class="line">	SYSTEMTIME st;</span><br><span class="line"></span><br><span class="line">	// 首先将基准时间（1900年1月1日0点0分0秒0毫秒）转化为Windows文件时间     </span><br><span class="line">	st.wYear = 1900;</span><br><span class="line">	st.wMonth = 1;</span><br><span class="line">	st.wDay = 1;</span><br><span class="line">	st.wHour = 0;</span><br><span class="line">	st.wMinute = 0;</span><br><span class="line">	st.wSecond = 0;</span><br><span class="line">	st.wMilliseconds = 0;</span><br><span class="line">	SystemTimeToFileTime(&amp;st, &amp;ft);</span><br><span class="line"></span><br><span class="line">	// 然后将Time Protocol使用的基准时间加上以及逝去的时间，即ulTime </span><br><span class="line">	LONGLONG *pLLong = (LONGLONG *)&amp;ft;</span><br><span class="line">	// 注意，文件时间单位是1/1000 0000秒，即1000万分之1秒（100-nanosecond ） </span><br><span class="line">	*pLLong += (LONGLONG)10000000 * ulTime;</span><br><span class="line"></span><br><span class="line">	// 再将时间转化回来，更新系统时间 </span><br><span class="line">	FileTimeToSystemTime(&amp;ft, &amp;st);</span><br><span class="line">	</span><br><span class="line">	std::cout &lt;&lt; &quot;UTC &quot;&lt;&lt;st.wYear &lt;&lt;&quot;年&quot;&lt;&lt; st.wMonth &lt;&lt; &quot;月&quot; &lt;&lt; st.wDay&lt;&lt;&quot;日&quot; &lt;&lt; st.wHour &lt;&lt; &quot;时&quot; &lt;&lt;st.wMinute &lt;&lt; &quot;分&quot; &lt;&lt; st.wSecond &lt;&lt; &quot;秒\n&quot;;</span><br><span class="line">	std::cout &lt;&lt; &quot;北京时间 &quot; &lt;&lt; st.wYear &lt;&lt; &quot;年&quot; &lt;&lt; st.wMonth &lt;&lt; &quot;月&quot; &lt;&lt; st.wDay+ (st.wHour + 8) / 24 &lt;&lt; &quot;日&quot; &lt;&lt; (st.wHour + 8)%24 &lt;&lt; &quot;时&quot; &lt;&lt; st.wMinute &lt;&lt; &quot;分&quot; &lt;&lt; st.wSecond &lt;&lt; &quot;秒\n&quot;;</span><br><span class="line">	std::cout &lt;&lt; &quot;美东时间 &quot; &lt;&lt; st.wYear &lt;&lt; &quot;年&quot; &lt;&lt; st.wMonth &lt;&lt; &quot;月&quot; &lt;&lt; st.wDay - (st.wHour &lt; 8 ? 1: 0 ) &lt;&lt; &quot;日&quot; &lt;&lt; (st.wHour - 8 +24) % 24 &lt;&lt; &quot;时&quot; &lt;&lt; st.wMinute &lt;&lt; &quot;分&quot; &lt;&lt; st.wSecond &lt;&lt; &quot;秒\n&quot;;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	SetSystemTime(&amp;st);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	SOCKET s = ::socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);</span><br><span class="line">	if (s == INVALID_SOCKET)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot; Failed socket() \n&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// 填写远程地址信息，连接到时间服务器 </span><br><span class="line">	sockaddr_in servAddr;</span><br><span class="line">	servAddr.sin_family = AF_INET;</span><br><span class="line">	servAddr.sin_port = htons(37);</span><br><span class="line">	// 这里使用的时间服务器是129.132.2.21，更多地址请参考谷歌 https://tf.nist.gov/tf-cgi/servers.cgi ntp time server ip</span><br><span class="line">	servAddr.sin_addr.S_un.S_addr = inet_addr(&quot;132.163.97.5&quot;);</span><br><span class="line">	if (::connect(s, (sockaddr*)&amp;servAddr, sizeof(servAddr)) == -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot; Failed connect() \n&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// 等待接收时间协议返回的时间。学习了Winsock I/O模型之后，最好使用异步I/O，以便设置超时 </span><br><span class="line">	ULONG ulTime = 0;</span><br><span class="line">	int nRecv = ::recv(s, (char*)&amp;ulTime, sizeof(ulTime), 0);</span><br><span class="line">	if (nRecv &gt; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		ulTime = ntohl(ulTime);</span><br><span class="line">		SetTimeFromTP(ulTime);</span><br><span class="line">		//printf(&quot; 成功与时间服务器的时间同步！\n&quot;);</span><br><span class="line">		//std::cout &lt;&lt; ulTime&lt;&lt;&quot;\n&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot; 时间服务器不能确定当前时间！\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	::closesocket(s);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>改进版本：实时刷新但是不用占用网络资源，适合于短时间内动态查看。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// WSTget.cpp : 定义控制台应用程序的入口点。</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">#include &quot;stdafx.h&quot;</span><br><span class="line">#include &lt;winsock2.h&gt; </span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#pragma comment(lib, &quot;WS2_32&quot;)  // 链接到WS2_32.lib </span><br><span class="line">//using std;</span><br><span class="line">#include &lt;time.h&gt; </span><br><span class="line">#include &lt;windows.h&gt;</span><br><span class="line"></span><br><span class="line">class CInitSock</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">	CInitSock(BYTE minorVer = 2, BYTE majorVer = 2)</span><br><span class="line">	&#123;</span><br><span class="line">		// 初始化WS2_32.dll </span><br><span class="line">		WSADATA wsaData;</span><br><span class="line">		WORD sockVersion = MAKEWORD(minorVer, majorVer);</span><br><span class="line">		if (::WSAStartup(sockVersion, &amp;wsaData) != 0)</span><br><span class="line">		&#123;</span><br><span class="line">			exit(0);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	~CInitSock()</span><br><span class="line">	&#123;</span><br><span class="line">		::WSACleanup();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//#include &quot;InitSock.h&quot; </span><br><span class="line">#include &lt;stdio.h&gt; </span><br><span class="line">CInitSock initSock;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">void No_Cursor()</span><br><span class="line">&#123;</span><br><span class="line">	HANDLE hOut;</span><br><span class="line">	hOut = GetStdHandle(STD_OUTPUT_HANDLE);</span><br><span class="line">	CONSOLE_CURSOR_INFO cci;</span><br><span class="line">	cci.dwSize = 1;</span><br><span class="line">	cci.bVisible = false;</span><br><span class="line">	SetConsoleCursorInfo(hOut, &amp;cci);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void gotoxy(short x, short y)</span><br><span class="line">&#123;</span><br><span class="line">	COORD pos = &#123; x,y &#125;;</span><br><span class="line">	HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);</span><br><span class="line">	SetConsoleCursorPosition(hOut, pos);</span><br><span class="line">	No_Cursor();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void SetTimeFromTP(ULONG ulTime)    // 根据时间协议返回的时间设置系统时间 </span><br><span class="line">&#123;</span><br><span class="line">	// Windows文件时间是一个64位的值，它是从1601年1月1日中午12:00到现在的时间间隔， </span><br><span class="line">	// 单位是1/1000 0000秒，即1000万分之1秒（100-nanosecond ） </span><br><span class="line">	FILETIME ft;</span><br><span class="line">	SYSTEMTIME st;</span><br><span class="line"></span><br><span class="line">	// 首先将基准时间（1900年1月1日0点0分0秒0毫秒）转化为Windows文件时间     </span><br><span class="line">	st.wYear = 1900;</span><br><span class="line">	st.wMonth = 1;</span><br><span class="line">	st.wDay = 1;</span><br><span class="line">	st.wHour = 0;</span><br><span class="line">	st.wMinute = 0;</span><br><span class="line">	st.wSecond = 0;</span><br><span class="line">	st.wMilliseconds = 0;</span><br><span class="line">	SystemTimeToFileTime(&amp;st, &amp;ft);</span><br><span class="line"></span><br><span class="line">	// 然后将Time Protocol使用的基准时间加上以及逝去的时间，即ulTime </span><br><span class="line">	LONGLONG *pLLong = (LONGLONG *)&amp;ft;</span><br><span class="line">	// 注意，文件时间单位是1/1000 0000秒，即1000万分之1秒（100-nanosecond ） </span><br><span class="line">	*pLLong += (LONGLONG)10000000 * ulTime;</span><br><span class="line"></span><br><span class="line">	// 再将时间转化回来，更新系统时间 </span><br><span class="line">	FileTimeToSystemTime(&amp;ft, &amp;st);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	//std::cout &lt;&lt; &quot;UTC &quot; &lt;&lt; st.wYear &lt;&lt; &quot;Year&quot; &lt;&lt; st.wMonth &lt;&lt; &quot;Month&quot; &lt;&lt; st.wDay &lt;&lt; &quot;Day&quot; &lt;&lt; st.wHour &lt;&lt; &quot;Hour&quot; &lt;&lt; st.wMinute &lt;&lt; &quot;Minute&quot; &lt;&lt; st.wSecond &lt;&lt; &quot;Second\n&quot;;</span><br><span class="line">	//std::cout &lt;&lt; &quot;CST &quot; &lt;&lt; st.wYear &lt;&lt; &quot;Year&quot; &lt;&lt; st.wMonth &lt;&lt; &quot;Month&quot; &lt;&lt; st.wDay + (st.wHour + 8) / 24 &lt;&lt; &quot;Day&quot; &lt;&lt; (st.wHour + 8) % 24 &lt;&lt; &quot;Hour&quot; &lt;&lt; st.wMinute &lt;&lt; &quot;Minute&quot; &lt;&lt; st.wSecond &lt;&lt; &quot;Second\n&quot;;</span><br><span class="line">	//std::cout &lt;&lt; &quot;EST &quot; &lt;&lt; st.wYear &lt;&lt; &quot;Year&quot; &lt;&lt; st.wMonth &lt;&lt; &quot;Month&quot; &lt;&lt; st.wDay - (st.wHour &lt; 8 ? 1 : 0) &lt;&lt; &quot;Day&quot; &lt;&lt; (st.wHour - 8 + 24) % 24 &lt;&lt; &quot;Hour&quot; &lt;&lt; st.wMinute &lt;&lt; &quot;Minute&quot; &lt;&lt; st.wSecond &lt;&lt; &quot;Second\n&quot;;</span><br><span class="line">	</span><br><span class="line">	while (1)</span><br><span class="line">	&#123;</span><br><span class="line">		gotoxy(0, 0);</span><br><span class="line">		std::cout &lt;&lt; &quot;                                                 \n                                                 \n                                                 \n&quot;;</span><br><span class="line">		gotoxy(0, 0);</span><br><span class="line">		std::cout &lt;&lt; &quot;CST &quot; &lt;&lt; st.wYear &lt;&lt; &quot;-&quot; &lt;&lt; st.wMonth &lt;&lt; &quot;-&quot; &lt;&lt; st.wDay + (st.wHour + 8) / 24 &lt;&lt; &quot; &quot; &lt;&lt; (st.wHour + 8) % 24 &lt;&lt; &quot;:&quot; &lt;&lt; st.wMinute &lt;&lt; &quot;:&quot; &lt;&lt; st.wSecond &lt;&lt; &quot;\n&quot;;</span><br><span class="line">		gotoxy(0, 1);</span><br><span class="line">		std::cout &lt;&lt; &quot;UTC &quot; &lt;&lt; st.wYear &lt;&lt; &quot;-&quot; &lt;&lt; st.wMonth &lt;&lt; &quot;-&quot; &lt;&lt; st.wDay &lt;&lt; &quot; &quot; &lt;&lt; st.wHour &lt;&lt; &quot;:&quot; &lt;&lt; st.wMinute &lt;&lt; &quot;:&quot; &lt;&lt; st.wSecond &lt;&lt; &quot;\n&quot;;</span><br><span class="line">		gotoxy(0, 2);</span><br><span class="line">		std::cout &lt;&lt; &quot;EST &quot; &lt;&lt; st.wYear &lt;&lt; &quot;-&quot; &lt;&lt; st.wMonth &lt;&lt; &quot;-&quot; &lt;&lt; st.wDay - (st.wHour &lt; 8 ? 1 : 0) &lt;&lt; &quot; &quot; &lt;&lt; (st.wHour - 8 + 24) % 24 &lt;&lt; &quot;:&quot; &lt;&lt; st.wMinute &lt;&lt; &quot;:&quot; &lt;&lt; st.wSecond &lt;&lt; &quot;\n&quot;;</span><br><span class="line">		</span><br><span class="line">		Sleep(1000);</span><br><span class="line"></span><br><span class="line">		st.wHour = st.wHour + (st.wMinute + 1) / 60;</span><br><span class="line"></span><br><span class="line">		st.wMinute = st.wMinute + (st.wSecond + 1) / 60; //59jump?</span><br><span class="line">		</span><br><span class="line">		st.wSecond = (st.wSecond + 1) % 60;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	//SetSystemTime(&amp;st);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int func()</span><br><span class="line">&#123;</span><br><span class="line">	SOCKET s = ::socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);</span><br><span class="line">	if (s == INVALID_SOCKET)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot; Failed socket() \n&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// 填写远程地址信息，连接到时间服务器 </span><br><span class="line">	sockaddr_in servAddr;</span><br><span class="line">	servAddr.sin_family = AF_INET;</span><br><span class="line">	servAddr.sin_port = htons(37);</span><br><span class="line">	// 这里使用的时间服务器是129.132.2.21，更多地址请参考谷歌 https://tf.nist.gov/tf-cgi/servers.cgi ntp time server ip</span><br><span class="line">	servAddr.sin_addr.S_un.S_addr = inet_addr(&quot;132.163.97.5&quot;);</span><br><span class="line">	if (::connect(s, (sockaddr*)&amp;servAddr, sizeof(servAddr)) == -1)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot; Failed connect() \n&quot;);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	// 等待接收时间协议返回的时间。学习了Winsock I/O模型之后，最好使用异步I/O，以便设置超时 </span><br><span class="line">	ULONG ulTime = 0;</span><br><span class="line">	int nRecv = ::recv(s, (char*)&amp;ulTime, sizeof(ulTime), 0);</span><br><span class="line">	if (nRecv &gt; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		ulTime = ntohl(ulTime);</span><br><span class="line">		SetTimeFromTP(ulTime);</span><br><span class="line">		//printf(&quot; 成功与时间服务器的时间同步！\n&quot;);</span><br><span class="line">		//std::cout &lt;&lt; ulTime&lt;&lt;&quot;\n&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot; 时间服务器不能确定当前时间！\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	::closesocket(s);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	func();</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/02/2019-08-02-C++控制台获取UTC和北京时间/" data-id="cjz8kus3m003cvsuer4eaymu9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/03/2019-08-03-批处理参数查明小点/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019-08-03-批处理参数查明小点
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/02/2019-08-02带学物语？北邮/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019-08-02带学物语？北邮</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/12/post-tst2/">post_tst2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/mypost-tst/">mypost_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/pic-tst/">pic_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/playGame/">playGame</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/Galgame-Tst/">Galgame_Tst</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

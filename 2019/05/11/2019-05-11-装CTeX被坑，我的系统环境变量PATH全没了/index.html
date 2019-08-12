@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了">
+<meta property="og:url" content="http://yoursite.com/2019/05/11/2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/05/11/2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了/14039561-26e8db51a167b8aa.png">
+<meta property="og:updated_time" content="2019-08-12T15:37:54.648Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了">
+<meta name="twitter:description" content="2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/11/2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了/14039561-26e8db51a167b8aa.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/11/2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了/" class="article-date">
+  <time datetime="2019-05-11T07:17:43.000Z" itemprop="datePublished">2019-05-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了</p>
+<a id="more"></a>
+<p>CTeX作者报复社会，不知道我哪里下的野版本，安装完PATH全没了。全盘备份的wim嫌旧怎么办，于是左右借来恢复PATH。</p>
+<p>1.尝试用wimkit阅读我之前的wim文件里的C:\windows\system32\config\system覆盖（当然有备份）真机文件，重启错误，只好又拷贝回去。</p>
+<p>2.借舍友的PATH</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files (x86)\Common Files\Oracle\Java\javapath;</span><br><span class="line">%SystemRoot%\system32;</span><br><span class="line">%SystemRoot%;</span><br><span class="line">%SystemRoot%\System32\Wbem;</span><br><span class="line">%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;</span><br><span class="line">%SYSTEMROOT%\System32\OpenSSH\;</span><br><span class="line">D:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin;</span><br><span class="line">%JAVA_HOME%\bin;</span><br><span class="line">%JAVA_HOME%\jre\bin;</span><br><span class="line">D:\Program Files (x86)\SMLNJ\bin\;</span><br><span class="line">D:\Program Files\CMake\bin;</span><br><span class="line">D:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;</span><br><span class="line">D:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;</span><br><span class="line">D:\Program Files\Microsoft SQL Server\140\Tools\Binn\;</span><br><span class="line">D:\Program Files\Microsoft SQL Server\140\DTS\Binn\;</span><br><span class="line">D:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;</span><br><span class="line">D:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;</span><br><span class="line">D:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;</span><br><span class="line">D:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\</span><br></pre></td></tr></table></figure>
+
+<p>3.开启我在机房全盘拷贝的win7系统，PATH有这些变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">C:\NOIP\MinGWNOIP\bin;</span><br><span class="line">C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-linux-gnu\2015.06-05\bin;</span><br><span class="line">C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2015.01-7\bin;</span><br><span class="line">C:\PROGRA~1\IMAGIN~1\Internals\msys\bin;</span><br><span class="line">C:\Program Files\MATLAB\R2010b\bin;</span><br><span class="line">C:\Program Files\MATLAB\R2010b\bin\win64;</span><br><span class="line">C:\Perl64\site\bin;</span><br><span class="line">C:\Perl64\bin;</span><br><span class="line">C:\Program Files\Sybase\Jaguar CTS 3.5\bin;</span><br><span class="line">C:\Program Files\Sybase\Jaguar CTS 3.5\dll;</span><br><span class="line">C:\Program Files\Sybase\Jaguar CTS 3.5\client\dll;</span><br><span class="line">C:\Program Files (x86)\Sybase\Shared\Sun\JDK118\bin;</span><br><span class="line">C:\Program Files (x86)\Sybase\Shared\PowerBuilder;</span><br><span class="line">C:\PROGRA~2\Borland\CBUILD~1\Bin;</span><br><span class="line">C:\PROGRA~2\Borland\CBUILD~1\Projects\Bpl;</span><br><span class="line">C:\Program Files (x86)\Intel\iCLS Client\;</span><br><span class="line">C:\Program Files\Intel\iCLS Client\;</span><br><span class="line">C:\Windows\system32;</span><br><span class="line">C:\Windows;</span><br><span class="line">C:\Windows\System32\Wbem;</span><br><span class="line">C:\Windows\System32\WindowsPowerShell\v1.0\;</span><br><span class="line">C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;</span><br><span class="line">C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;</span><br><span class="line">C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;</span><br><span class="line">C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;</span><br><span class="line">C:\Program Files\MATLAB\R2010b\runtime\win64;</span><br><span class="line">C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;</span><br><span class="line">C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;</span><br><span class="line">C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;</span><br><span class="line">C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;</span><br><span class="line">C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;</span><br><span class="line">C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;</span><br><span class="line">C:\Program Files (x86)\Sybase\SQL Anywhere 7\win32;</span><br><span class="line">C:\Program Files (x86)\Sybase\PowerDynamo\win32;</span><br><span class="line">C:\Program Files (x86)\Sybase\Shared\Web Targets;</span><br><span class="line">C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;</span><br><span class="line">C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;</span><br><span class="line">C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;</span><br><span class="line">C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;</span><br><span class="line">C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;</span><br><span class="line">C:\Program Files\Git\cmd;</span><br><span class="line">c:\iverilog\bin;</span><br><span class="line">c:\iverilog\gtkwave\bin;</span><br><span class="line">C:\Program Files (x86)\Digilent\AdeptUtilities</span><br></pre></td></tr></table></figure>
+
+<p>我是一个个用everything和资源管理器对比真实路径的，然后手动恢复的，恢复完还是没法操作，有一个注意点，就是每一行行尾不要加分号。其实你看<br>计算机\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Environment里面就知道了，改完就好了。</p>
+<p><img src="/2019/05/11/2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了/14039561-26e8db51a167b8aa.png" alt="image.png"></p>
+<p>最终配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Imagination Technologies\Internals\msys\bin</span><br><span class="line">C:\Program Files\Imagination Technologies\Toolchains\mips-mti-elf\2015.01-7\bin</span><br><span class="line">C:\PROGRA~1\IMAGIN~1\Internals\msys\bin</span><br><span class="line">C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-linux-gnu\2015.06-05\bin</span><br><span class="line">%SystemRoot%\system32</span><br><span class="line">%SystemRoot%</span><br><span class="line">%SystemRoot%\System32\Wbem</span><br><span class="line">%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\</span><br><span class="line">%JAVA_HOME%\bin</span><br><span class="line">%SYSTEMROOT%\System32\OpenSSH\</span><br><span class="line">%JAVA_HOME%\jre\bin</span><br><span class="line">%GOROOT%\bin</span><br><span class="line">C:\Program Files (x86)\SMLNJ\bin\</span><br><span class="line">C:\Program Files\CMake\bin</span><br><span class="line">C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\</span><br><span class="line">C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\</span><br><span class="line">C:\Program Files\Microsoft SQL Server\140\Tools\Binn\</span><br><span class="line">C:\Program Files\Microsoft SQL Server\140\DTS\Binn\</span><br><span class="line">C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\</span><br><span class="line">C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\</span><br><span class="line">C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\</span><br><span class="line">C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio</span><br><span class="line">C:\CTEX\UserData\miktex\bin</span><br><span class="line">C:\CTEX\MiKTeX\miktex\bin</span><br><span class="line">C:\CTEX\CTeX\ctex\bin</span><br><span class="line">C:\CTEX\CTeX\cct\bin</span><br><span class="line">C:\CTEX\CTeX\ty\bin</span><br><span class="line">C:\CTEX\Ghostscript\gs9.00\bin</span><br><span class="line">C:\CTEX\GSview\gsview</span><br><span class="line">C:\CTEX\WinEdt</span><br><span class="line">C:\MinGW\bin</span><br><span class="line">C:\Users\Administrator\AppData\Local\Programs\Python\Python36</span><br></pre></td></tr></table></figure>
+
+<p>嘴臭一下，CTeX NM$L。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/11/2019-05-11-装CTeX被坑，我的系统环境变量PATH全没了/" data-id="cjz8kurvp000vvsue07etzw7q" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/05/11/2019-05-11/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Sat May 11 2019 00:00:00 GMT+0900 (GMT+09:00)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/04/24/2019-04-24-风之谷(2)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019-04-24-风之谷(2)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/12/post-tst2/">post_tst2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/mypost-tst/">mypost_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/pic-tst/">pic_tst</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/playGame/">playGame</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/12/Galgame-Tst/">Galgame_Tst</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
