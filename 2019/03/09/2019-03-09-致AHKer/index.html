@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2019-03-09-致AHKer | Akari Sama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="致AHKer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-03-09-致AHKer">
+<meta property="og:url" content="http://yoursite.com/2019/03/09/2019-03-09-致AHKer/index.html">
+<meta property="og:site_name" content="Akari Sama">
+<meta property="og:description" content="致AHKer">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-15T12:52:25.288Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-03-09-致AHKer">
+<meta name="twitter:description" content="致AHKer">
+  
+    <link rel="alternate" href="/atom.xml" title="Akari Sama" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Akari Sama</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-03-09-致AHKer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/09/2019-03-09-致AHKer/" class="article-date">
+  <time datetime="2019-03-09T00:45:35.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2019-03-09-致AHKer
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>致AHKer</p>
+<a id="more"></a>
+<p>全世界ahker联合起来，夺回属于ahk在程序世界的一切！</p>
+<p>说笑归说笑，在coders里没有几个人不认识autohotkey的，入门倒也很简单</p>
+<blockquote>
+<p>中文说明地址：<a href="https://wyagd001.github.io/zh-cn/docs/AutoHotkey.htm" target="_blank" rel="noopener">https://wyagd001.github.io/zh-cn/docs/AutoHotkey.htm</a><br>路线：热键!^+#的表示，组合热键，按键列表，程序窗口。。<br>举例：#a表示win+a组合，!b表示alt+b组合，^c表示ctrl+c，+d表示shift+d，还可以派生^+e，#^f，^!g，^+!h等组合</p>
+</blockquote>
+<p>看得差不多就可以开始了<br>我们直接说哪些可以帮助提高效率的思路，当然这里只是浅水区，终极用法可以到github或者qq群和各路大佬谈笑风生。</p>
+<p>第一种当然是<code>run 程序/路径/网址</code> ，这类基本占了90%<br>第二种是按键映射，对于右撇子来讲，左手可以操作删除（backspace），还有回车换行（\r\n）,可以使用反单引号和capslock映射到backspace和enter，另外可以增加一对热键控制其生效或失效。右手呢，控制复制粘贴（鼠标左侧的两个按键）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">XButton1::^c</span><br><span class="line"></span><br><span class="line">XButton2::^v</span><br><span class="line"></span><br><span class="line">`::backspace</span><br><span class="line"></span><br><span class="line">capslock UP::send,&#123;enter&#125;    ;这里UP表示按下弹起后生效</span><br><span class="line"></span><br><span class="line">!1::Suspend   ;控制生效失效</span><br></pre></td></tr></table></figure>
+
+<p>第三种是字符串操作，在对于像经常使用BaiduPCS-go的朋友很有用配合<code>Clipboard</code>使用，比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">!l:: 	</span><br><span class="line">		Length := StrLen(Clipboard)</span><br><span class="line">		MsgBox,字符串长度为%Length%</span><br><span class="line">		return</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/*</span><br><span class="line">第一个对于像windows路径为反斜杠和部分编程需要正斜杠路径的矛盾，可以实现按下alt+/后替换剪切板的内容</span><br><span class="line">*/</span><br><span class="line">!/:: </span><br><span class="line">	Clipboard := StrReplace(Clipboard, &quot;\&quot;,&quot;/&quot;) </span><br><span class="line">	return</span><br><span class="line"></span><br><span class="line">!space::	</span><br><span class="line">	Clipboard := StrReplace(Clipboard, &quot; &quot;,&quot;\ &quot;)	</span><br><span class="line">	return</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">^!/::	</span><br><span class="line">	Clipboard := StrReplace(Clipboard, &quot;/&quot;,&quot;\&quot;)	</span><br><span class="line">	return</span><br><span class="line"></span><br><span class="line">!&apos;::	</span><br><span class="line">	clipboard=&quot;%clipboard%&quot;	</span><br><span class="line">	return</span><br></pre></td></tr></table></figure>
+
+<p>第四种配合程序窗体使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#w::    ;获取窗体的类</span><br><span class="line">WinGetClass, class, A</span><br><span class="line">Clipboard=%class%</span><br><span class="line">MsgBox %class%</span><br><span class="line">return</span><br><span class="line"></span><br><span class="line">f1::</span><br><span class="line">IfWinActive, ahk_class CabinetWClass ;</span><br><span class="line">/*CabinetWClass 表示资源管理器，这里在集成了QTTabBar的资源管理器里f1、f2可以用作previousTab和nextTab使用，同理f6/f7/f8分别表示剪切粘贴删除*/</span><br><span class="line">send,^+&#123;tab&#125;</span><br><span class="line">return</span><br><span class="line"></span><br><span class="line">f2::</span><br><span class="line">IfWinActive, ahk_class CabinetWClass ;Cmder ;ahk_class VirtualConsoleClass ;</span><br><span class="line">send,^&#123;tab&#125;</span><br><span class="line">return</span><br><span class="line"></span><br><span class="line">f6::</span><br><span class="line">IfWinActive, ahk_class CabinetWClass</span><br><span class="line">send,^x</span><br><span class="line">return</span><br><span class="line"></span><br><span class="line">f7::</span><br><span class="line">IfWinActive, ahk_class CabinetWClass</span><br><span class="line">send,^v</span><br><span class="line">return</span><br><span class="line"></span><br><span class="line">f8::</span><br><span class="line">IfWinActive, ahk_class CabinetWClass</span><br><span class="line">send,^d</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
+
+<p>说明，对于fn键ahk并不能直接控制；</p>
+<hr>
+<p>下面内容看心情添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">!^p:: ;拷贝剪切板到D:\tmp.txt，然后复制到USB手机/sdcard/A/tmp.txt</span><br><span class="line">&#123;</span><br><span class="line">/*FileSelectFile, positionFileName, S16,, Create a new file:</span><br><span class="line">if (positionFileName = &quot;&quot;)</span><br><span class="line">	return</span><br><span class="line">*/</span><br><span class="line">positionFileName = D:\tmp.txt</span><br><span class="line">content = %Clipboard%</span><br><span class="line">outFile := FileOpen(positionFileName , &quot;w&quot; , &quot;utf-8&quot;)</span><br><span class="line">  if !IsObject(outFile)</span><br><span class="line">  &#123;</span><br><span class="line">   MsgBox , 不能打开文件: %positionFileName%</span><br><span class="line">   return </span><br><span class="line">  &#125;</span><br><span class="line">  outFile.write(content)</span><br><span class="line">  outFile.Close()</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  Run, %ComSpec% /c adb push D:\tmp.txt /sdcard/A/</span><br><span class="line">;命令行解释器cmd.exe 用那个宏来表示？</span><br><span class="line">;%ComSpec% /k在执行完命令后保留命令提示窗口，而/c则在执行完命令之后关闭提示窗口</span><br><span class="line">  return</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/09/2019-03-09-致AHKer/" data-id="cjzcorsq3000ts0ue49mupiev" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/03/10/2019-03-10-阿波罗8号咨询信/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019-03-10-阿波罗8号咨询信
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/08/2019-03-08-爱折腾的IT死宅/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019-03-08-爱折腾的IT死宅</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Galgame/">Galgame</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Galgame/" style="font-size: 10px;">Galgame</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/15/2019-08-15-我经常使用的adb命令/">2019-08-15-我经常使用的adb命令</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/15/2019-08-15-Notification-for-Stop-Updating/">2019-08-15-Notification-for-Stop-Updating</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/2019-08-14-帕菲露之里伽子/">2019-08-14-帕菲露之里伽子</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/2019-08-14-blog美化升级/">2019-08-14-blog美化升级</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/2019-08-14-妹系小谈/">2019-08-14-妹系小谈</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Akari Sama<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

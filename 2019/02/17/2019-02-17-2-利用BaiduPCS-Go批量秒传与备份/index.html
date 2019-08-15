@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2019-02-17-2-利用BaiduPCS-Go批量秒传与备份 | Akari Sama</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2-利用BaiduPCS-Go批量秒传与备份">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-02-17-2-利用BaiduPCS-Go批量秒传与备份">
+<meta property="og:url" content="http://yoursite.com/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/index.html">
+<meta property="og:site_name" content="Akari Sama">
+<meta property="og:description" content="2-利用BaiduPCS-Go批量秒传与备份">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-2d0b282842ba538c.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-fb8d17a6c4d64a1f.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-bc5f0513be1aae53.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-5f446f365edb8ed5.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-1d0822faefb8ebb0.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-f4687244c2a6a610.png">
+<meta property="og:image" content="http://yoursite.com/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-0c199cddd9c80859.png">
+<meta property="og:updated_time" content="2019-08-15T12:52:25.201Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-02-17-2-利用BaiduPCS-Go批量秒传与备份">
+<meta name="twitter:description" content="2-利用BaiduPCS-Go批量秒传与备份">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-2d0b282842ba538c.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Akari Sama" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Akari Sama</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-02-17-2-利用BaiduPCS-Go批量秒传与备份" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/" class="article-date">
+  <time datetime="2019-02-17T05:45:35.000Z" itemprop="datePublished">2019-02-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2019-02-17-2-利用BaiduPCS-Go批量秒传与备份
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2-利用BaiduPCS-Go批量秒传与备份</p>
+<a id="more"></a>
+<h1 id="项目地址引用："><a href="#项目地址引用：" class="headerlink" title="项目地址引用："></a>项目地址引用：</h1><p><a href="https://github.com/iikira/BaiduPCS-Go" target="_blank" rel="noopener">https://github.com/iikira/BaiduPCS-Go</a><br>基本思想：根据手动秒传的方法，只要知道file_size和文件md5值，再根据自己意愿添加一个文件名，就可以根据云端已有数据在自己云盘中”拷贝”一份副本。</p>
+<h1 id="项目背景和思想"><a href="#项目背景和思想" class="headerlink" title="项目背景和思想"></a>项目背景和思想</h1><p>作者到目前有几十个云盘账号，文件管理起来比较麻烦，连账号切换都得靠Cookie Profile Switcher插件实现。再说，一个松鼠党必须时时保持警惕，应对账号被封资源丢失的痛苦。<br>秒传的原理是：通过检测文件大小和md5值，或者再加上其他如文件前256KB切片的md5值的信息，若云端有相同的文件，则直接进行云端拷贝。<br>BaiduPCS-Go的作者在新版本中实现如下功能：只需要知道file_size和md5，就可以实现在本地硬盘没有该文件下，但是云端别人已经上传过该文件时，进行虚拟秒传。<br>BaiduPCS-Go及其秒传功能的用法就不赘述了，均在github上。<br>举例：BaiduPCS-Go ru -length=&lt;文件的大小&gt; -md5=&lt;文件的md5值&gt; &lt;网盘路径/文件名&gt;<br>基于此思想，根据BaiduYunCacheFileV0.db文件含有文件目录，文件名，大小，md5等信息的原理，我们可以利用SQLite工具提取信息，配合Excel和其公式，制作一个如下类型的批处理文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">BaiduPCS-Go ru -length=&lt;size_1&gt; -md5=&lt;md5_1&gt; &lt;文件1&gt;</span><br><span class="line">BaiduPCS-Go ru -length=&lt;size_2&gt; -md5=&lt;md5_2&gt; &lt;文件2&gt;</span><br><span class="line">BaiduPCS-Go ru -length=&lt;size_3&gt; -md5=&lt;md5_3&gt; &lt;文件3&gt;</span><br><span class="line">...</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<h1 id="项目着手"><a href="#项目着手" class="headerlink" title="项目着手"></a>项目着手</h1><h3 id="下载与登陆"><a href="#下载与登陆" class="headerlink" title="下载与登陆"></a>下载与登陆</h3><p>首先，下载BaiduPCS-Go.exe，并放到合适的目录中。<br>输入login回车，按提示输入账号、密码、和验证登陆。</p>
+<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p><img src="/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-2d0b282842ba538c.png" alt="步骤1.png"><br><img src="/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-fb8d17a6c4d64a1f.png" alt="步骤2.png"></p>
+<h3 id="提取BaiduYunCacheFileV0-db中信息"><a href="#提取BaiduYunCacheFileV0-db中信息" class="headerlink" title="提取BaiduYunCacheFileV0.db中信息"></a>提取BaiduYunCacheFileV0.db中信息</h3><p>接下来有一个工具，为了展示该秒传法的实用性，我直接通过下面途径来”分享“出来。<br>在命令提示符中输入下面命令，即可保存一份SQLiteSpy.exe在你们云盘中，前提是你已经在BaiduPCS-Go中登陆过了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BaiduPCS-Go ru -length=3746304 -md5=D3C44CE0F2EA0886091DFBDD3BB6CB45 /SQLiteSpy/SQLiteSpy.exe</span><br></pre></td></tr></table></figure>
+
+<p>然后下载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BaiduPCS-Go d SQLiteSpy</span><br></pre></td></tr></table></figure>
+
+<p>相同方法下载第二个更强大的工具</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">BaiduPCS-Go ru -length=101809138 -md5=09FC738A805C8EA4C27A86C553C1A048 /navicat/navicatpremiumpjb3264lsb.zip</span><br><span class="line">BaiduPCS-Go d navicat</span><br></pre></td></tr></table></figure>
+
+<p>使用SQLiteSpy.exe配合everything找到并打开BaiduYunCacheFileV0.db，点击cache打开，随意点击某一格，ctrl+a然后ctrl+c，全选复制，新建文本文档，粘贴保存。<br><img src="/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-bc5f0513be1aae53.png" alt="use1.png"><br><img src="/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-5f446f365edb8ed5.png" alt="use2.png"></p>
+<h3 id="Excel中合成命令行指令并运行"><a href="#Excel中合成命令行指令并运行" class="headerlink" title="Excel中合成命令行指令并运行"></a>Excel中合成命令行指令并运行</h3><p>打开excel，数据-导入文本文档，自动生成带有格式的表格。<br>可见A到J列为如下数据：<br>| A | B | C | D | E | F | G | H | I | J |<br>| ——| —— | —— | ——| —| —— | ——| —— | —— | ——|<br>| id | fid | parent_path | server_filename | file_size | md5 | isdir | category | server_mtime | local_mtime |<br>在一个空列中编辑公式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">=&quot;BaiduPCS-Go ru -length=&quot;&amp;E1&amp;&quot; -md5=&quot;&amp;F1&amp;&quot; &quot;&quot;&quot;&amp;C1&amp;D1&amp;&quot;&quot;&quot;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>ctrl+d填充所有，复制需要的命令行到文本文档中保存为bat文件或者cmd文件。此处命名为”name.bat”<br>然后双击运行即可实现批量秒传文件。</p>
+<h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><h5 id="针对Unicode字符的解决方法"><a href="#针对Unicode字符的解决方法" class="headerlink" title="针对Unicode字符的解决方法"></a>针对Unicode字符的解决方法</h5><p>有时文件名有类似”†“的Unicode字符，即使保存为Unicode或者utf-8文档，在cmd中运行也是乱码，这时候就需要转码。<br>先将name.bat保存为utf-8编码的文档。<br>预先在cmd中输入chcp 65001可以无乱码运行utf-8文件。所以在name.bat同目录下建立另一个bat文件，输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chcp 65001</span><br><span class="line">name.bat</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<p>保存该bat为ANSI编码，双击运行即可调用name.bat。<br>如果需要保存输出到文本文档查看哪些秒传失败，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chcp 65001</span><br><span class="line">name.bat &gt;&gt;log.txt</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<p>运行结束即可在log.txt中查看记录。</p>
+<h5 id="针对过大的数据库"><a href="#针对过大的数据库" class="headerlink" title="针对过大的数据库"></a>针对过大的数据库</h5><p>如果BaiduYunCacheFileV0.db超过10MB，往往在SQLiteSpy中复制的文本不能完全粘贴在文本文档中，这时需要Navicat Premium 12</p>
+<p><img src="/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-1d0822faefb8ebb0.png" alt="use3.png"><br><img src="/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-f4687244c2a6a610.png" alt="use4.png"><br><img src="/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/12782677-0c199cddd9c80859.png" alt="use5.png"><br>如图打开BaiduYunCacheFileV0.db，导出文本文件或者excel文件，字符具体处理公式可能根据导出内容有差别，但是处理思路一样。</p>
+<h1 id="项目测试"><a href="#项目测试" class="headerlink" title="项目测试"></a>项目测试</h1><p>亲测秒传一些游戏资源，结果如下：<br>对自己一个账号内一共2TB的资源进行信息提取，命令行秒传测试，成功秒传了1.3TB。嗯，算不错的说。因为度娘可能对某些虽然别人已经上传但是资源太新的文件没有计入秒传名单内。<br>此法不失为一种备份自己已有资源的好办法。另外，还希望大家好好利用此方法的同时遵纪守法O v O。</p>
+<p>s</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/17/2019-02-17-2-利用BaiduPCS-Go批量秒传与备份/" data-id="cjzcorsot0008s0uey2636cwl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/02/18/2019-02-18-Apollo-Ebook-Make-(阿波罗计划电子书)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019-02-18-Apollo-Ebook-Make-(阿波罗计划电子书)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/02/16/2019-02-16-12月不容错过的46P彗星/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019-02-16-12月不容错过的46P彗星</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Galgame/">Galgame</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Galgame/" style="font-size: 10px;">Galgame</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/15/2019-08-15-我经常使用的adb命令/">2019-08-15-我经常使用的adb命令</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/15/2019-08-15-Notification-for-Stop-Updating/">2019-08-15-Notification-for-Stop-Updating</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/2019-08-14-帕菲露之里伽子/">2019-08-14-帕菲露之里伽子</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/2019-08-14-blog美化升级/">2019-08-14-blog美化升级</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/14/2019-08-14-妹系小谈/">2019-08-14-妹系小谈</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Akari Sama<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
