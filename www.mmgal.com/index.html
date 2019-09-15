@@ -76,7 +76,7 @@
             if (status) {
                 console.log(status);
                 for (let i = 0; i < data.length; i++) {
-                    $("#mygalgame_list").append("<tr><td>" + data[i].pwd + "</td><td class='list'><a href=\""+ data[i].git_url +"\" target=\"_blank\">" + data[i].title + "</a></td><td><textarea id='codecopy"+ i.toString() +"'>" + data[i].addr + "</textarea></td>" + "<td><button class=\"copy\" onclick=copy(\""+i.toString()+"\") style=\"background-color:#D9534F;border-radius:5px;color:white;\">复制链接</button></td></tr>");
+                    $("#mygalgame_list").append("<tr><td>" + data[i].pwd + "</td><td class='list'><a href=\""+ data[i].git_url +"\" target=\"_blank\">" + data[i].title + "</a></td><td><textarea id='codecopy"+ i.toString() +"'>" + "链接: "+data[i].addr+ "  提取码: "+ data[i].pwd + "</textarea></td>" + "<td><button class=\"copy\" onclick=copy(\""+i.toString()+"\") style=\"background-color:#D9534F;border-radius:5px;color:white;\">复制链接</button></td></tr>");
                 }
             } else {
                 console.log("400: Invalid request" + status);
