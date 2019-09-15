@@ -59,7 +59,9 @@
                     </caption>
                     <tbody id="mygalgame_list">
                     <tr><th colspan="5" style="text-align: center"> Powered by <a href="https://www.2dfan.com/" title="https://www.2dfan.com/" target="_blank">www.2dfan.com</a></th></tr>
-                    <tr><td style="text-align: center; width: 50%;">序号</td><td>标题</td></tr>
+                    <tr><th colspan="5" style="text-align: center"><a href="https://ultrapre.github.io" title="https://ultrapre.github.io">Home Page</a></th></tr>
+                    <tr><td style="text-align: left; width: 10%;"><a href="javascript:Previous();">Previous</a></td><td width="80%" style="text-align: right; width: 80%;"><a href="javascript:Next();">Next</a></td></tr>
+                    <tr><td style="text-align: center; width: 10%;">序号</td><td>标题</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -72,13 +74,63 @@
 <script type="text/javascript" src="https://ultrapre.github.io/www.mmgal.com/js/fade.js"></script>
 <script>console.log('%c       ', 'font-size: 150px; background: url(https://ws1.sinaimg.cn/large/006nOlwNgy1fktngl8rdnj3090090myp.jpg) no-repeat;');</script>
 <script>
+var nowpage = 1;
+function Previous(){
+	if(nowpage!=1){
+		nowpage = nowpage-1;
+		LoadPage(nowpage);
+		//alert("复制链接成功！"+nowpage.toString());
+	}
+	
+	
+}
+function Next(){
+	if(nowpage!=5){
+		nowpage = nowpage+1;
+		LoadPage(nowpage);
+		//alert("复制链接成功！"+nowpage.toString());
+	}
+}
+function LoadPage(nowpage){
+	$("#mygalgame_list").empty();
+	$("#mygalgame_list").append("<tr><th colspan=\"5\" style=\"text-align: center\"> Powered by <a href=\"https://www.2dfan.com/\" title=\"https://www.2dfan.com/\" target=\"_blank\">www.2dfan.com</a></th></tr><tr><th colspan=\"5\" style=\"text-align: center\"><a href=\"https://ultrapre.github.io\" title=\"https://ultrapre.github.io\">Home Page</a></th></tr>	                    <tr><td style=\"text-align: left; width: 10%;\"><a href=\"javascript:Previous();\">Previous</a></td><td width=\"80%\" style=\"text-align: right; width: 80%;\"><a href=\"javascript:Next();\">Next</a></td></tr>                    <tr><td style=\"text-align: center; width: 10%;\">序号</td><td>标题</td></tr>");
+	
+	var resource_list = "https://ultrapre.github.io/www.2dfan.com/2DFan.json";
+        $.getJSON(resource_list, function (data, status) {
+            if (status) {
+                console.log(status);
+				
+				var finallen = 500*nowpage;
+				if(finallen > data.length){
+					finallen = data.length;
+				}
+				
+				
+                for (let i = 500*nowpage-500; i < finallen; i++) {
+                    $("#mygalgame_list").append("<tr><td class='list'>" + (i+1) + "</td><td><a href=\""+ data[i].locallink +"\" target=\"_blank\">" + data[i].name + "</a></td></tr>");
+                }
+            } else {
+                console.log("400: Invalid request" + status);
+            }
+        });
+        $('body').GalMenu({
+            'menu': 'GalDropDown'
+        });
+        $('.hero__scroll').on('click', function (e) {
+            $('html, body').animate({
+                scrollTop: $(window).height()
+            }, 1200);
+        });
+}
+</script>
+<script>
     $(document).ready(function () {
         var resource_list = "https://ultrapre.github.io/www.2dfan.com/2DFan.json";
         $.getJSON(resource_list, function (data, status) {
             if (status) {
                 console.log(status);
-                for (let i = 0; i < data.length; i++) {
-                    $("#mygalgame_list").append("<tr><td class='list'>" + data[i].num + "</td><td><a href=\""+ data[i].locallink +"\" target=\"_blank\">" + data[i].name + "</a></td></tr>");
+                for (let i = 0; i < 500; i++) {
+                    $("#mygalgame_list").append("<tr><td class='list'>" + (i+1) + "</td><td><a href=\""+ data[i].locallink +"\" target=\"_blank\">" + data[i].name + "</a></td></tr>");
                 }
             } else {
                 console.log("400: Invalid request" + status);
