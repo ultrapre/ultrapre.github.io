@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Mygalgame backup</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="https://ultrapre.github.io/www.mmgal.com/myfavicon.ico">
+    <title>Mygalgame List</title>
     <link rel="stylesheet" href="https://ultrapre.github.io/www.mmgal.com/css/style.css">
     <link rel="stylesheet" href="https://ultrapre.github.io/www.mmgal.com/css/myblog.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://jancgk.github.io/Background/css/combine.css">
     <link rel="stylesheet" href="https://jancgk.github.io/Background/css/fade.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
-    <script src="https://jancgk.github.io/Background/js/hideseek.min.js"></script>
+    <script src="https://jancgk.github.io/Background/js/GalMenu.js"></script>
+    <script src="https://jancgk.github.io/Background/js/GalH.js"></script>
 </head>
 <body class="home blog logged-in" ondragstart="return false">
 <section class="hidden-xs">
@@ -28,19 +29,22 @@
     <div class="circle" id="gal">
         <div class="ring">
             <a href="https://ultrapre.github.io/www.mygalgame.com" title="首页" class="menuItem">首页</a>
-            <a href="https://ultrapre.github.io/www.mmgal.com/page/1/" target="_blank" title=""
-               class="menuItem">下一页</a>
+            <a href="https://ultrapre.github.io/www.mmgal.com/page/1/" target="_blank" title="" class="menuItem">下一页</a>
             <a href="https://ultrapre.github.io/www.mmgal.com/message.html" target="_blank" title="" class="menuItem">留言版</a>
-            <a href="https://ultrapre.github.io/www.mmgal.com/?orderby=views" target="_blank" title=""
-               class="menuItem">热门排行</a>
-            <a href="https://ultrapre.github.io/www.mmgal.com/gengxinrizhi.html" target="_blank" title=""
-               class="menuItem">更新日志</a>
-            <a href="https://ultrapre.github.io/www.mmgal.com/page/N1/" target="_blank" title=""
-               class="menuItem">上一页</a>
+            <a href="https://ultrapre.github.io/www.mmgal.com/?orderby=views" target="_blank" title="" class="menuItem">热门排行</a>
+            <a href="https://ultrapre.github.io/www.mmgal.com/gengxinrizhi.html" target="_blank" title="" class="menuItem">更新日志</a>
+            <a href="https://ultrapre.github.io/www.mmgal.com/page/N1/" target="_blank" title="" class="menuItem">上一页</a>
         </div>
         <audio id="audio" src="https://www.hacg.me/mp3/onj001.mp3"></audio>
     </div>
 </div>
+<script type="text/javascript">
+    var items = document.querySelectorAll('.menuItem');
+    for (var i = 0, l = items.length; i < l; i++) {
+        items[i].style.left = (50 - 35 * Math.cos(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+        items[i].style.top = (50 + 35 * Math.sin(-0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }
+</script>
 <div id="overlay" class="magnify">
     <div class="large h_img"></div>
     <img class="small" src="https://ultrapre.github.io/www.mmgal.com/images/rpic.png" width="1920">
@@ -48,83 +52,56 @@
 <div id="zan-bodyer">
     <div class="container">
         <div class="row">
-            <div class="player_show">
-                <div class="play">
-                    <div id="aplayer">
-                        <script>
-                            $(function () {
-                                $.ajax({
-                                    url: 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=879840820',
-                                    success: function (list) {
-                                        var ap = new APlayer({
-                                            container: document.getElementById('aplayer'),
-                                            mini: false,
-                                            mutex: true,
-                                            listMaxHeight: '280px',
-                                            lrcType: 3,
-                                            theme: '#ff69b4',
-                                            order: 'random',
-                                            listFolded:true,
-                                            audio: JSON.parse(list)
-                                        })
-                                    }
-                                })
-                            })
-                        </script>
-                    </div>
-                </div>
+            <div class="form_play">
+                <table align="left" class="table table-condensed table-hover myform">
+                    <caption>Mygalgame List</caption>
+                    <tbody id="mygalgame_list">
+                    <tr><th colspan="5" style="text-align: center"> Powered by <a href="https://www.mygalgame.com" title="https://www.mygalgame.com" target="_blank">Mygalgame.com</a></th></tr>
+                    <tr><td style="text-align: center; width: 10%;">Sequence</td><td>Title</td><td>Download</td><td>CopyLink</td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </div>
 <footer id="zan-footer">
-    <div class="row">
-        <div class="zan-footer-col-md-2"><a href="https://ultrapre.github.io/www.mmgal.com/page/N1/" target="_blank"><i class="fa fa-angle-double-left fa-lg"></i>2018<span class="hidden-xs">(New Page)</span></a></div>
-        <div class="zan-footer-col-md-6">
-            <div class="search">
-                <input id="search-highlight" name="search-highlight" placeholder="Game Filter" type="text" data-list=".highlight_list" autocomplete="off">
-                <ul id="search-item" class="vertical highlight_list"></ul>
-            </div>
-        </div>
-        <div class="zan-footer-col-md-2"><a href="https://ultrapre.github.io/www.mmgal.com/page/1/" target="_blank">2017<span class="hidden-xs">(Old Page)</span><i class="fa fa-angle-double-right fa-lg"></i></a></div>
-    </div>
-    <div class="footer-site">
-        <a href="https://www.mygalgame.com/" target="_blank"><i class="fa fa-home"></i><span class="hidden-xs"> Mygalgame | </span></a>
-        <a href="https://ultrapre.github.io/www.mmgal.com/" target="_blank"><i class="fa fa-link"></i><span class="hidden-xs"> Mygalgame backup | </span></a>
-        <a href="https://www.mmgal.com/donate.html" target="_blank"><i class="fa fa-dollar"></i><span class="hidden-xs"> Donate Mygalgame &copy;</span></a>
-    </div>
-    <div class="footer-page-link col-md-2 pull-left">
-        <div class="zan-page clearfix">
-            <ul class="pagination pagination-zan">
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/llss_resource_list.html" target="_blank" class="hidden-xs">琉璃神社</a></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/Game_list/mygalgameList.html" target="_blank" class="hidden-xs">Mygalgame List</a></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/page/N1/" target="_blank" class="hidden-xs">N1</a></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/page/N2/" target="_blank" class="hidden-xs">N2</a></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/page/N3/" target="_blank" class="hidden-xs">N3</a></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/" target="_blank" class="hidden-xs">...</a></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/page/N14/" target="_blank" class="hidden-xs">N14</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-page-link col-md-2">
-        <div class="zan-page clearfix">
-            <ul class="pagination pagination-zan">
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/page/1/" target="_blank" class="hidden-xs">1</a></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/page/2/" target="_blank" class="hidden-xs">2</a></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/page/3/" target="_blank" class="hidden-xs">3</a></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/page/4/" target="_blank" class="hidden-xs">4</a></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/page/5/" target="_blank" class="hidden-xs">5</a></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/page/6/" target="_blank" class="hidden-xs">6</a></li>
-                <li><span class="hidden-xs">...</span></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/page/72/" target="_blank" class="hidden-xs">72</a></li>
-                <li><a href="https://ultrapre.github.io/www.mmgal.com/page/2/" target="_blank" class="hidden-xs">»</a></li>
-            </ul>
-        </div>
-    </div>
+    <div class="row"></div>
 </footer>
-<script type="text/javascript" src="https://jancgk.github.io/Background/js/Gal.min.js"></script>
 <script type="text/javascript" src="https://ultrapre.github.io/www.mmgal.com/js/fade.js"></script>
-<script>console.log('%c       ', 'font-size: 150px; background: url(https://ws1.sinaimg.cn/large/006nOlwNgy1fktngl8rdnj3090090myp.jpg) no-repeat;');$(document).ready(function(){$('body').GalMenu({'menu':'GalDropDown'});var resource_list="https://ultrapre.github.io/www.mmgal.com/Game_list/mygalgameList.json";$.getJSON(resource_list,function(data,status){if(status){for(let i=0;i<data.length;i++){$("#search-item").append("<li><a href='"+data[i].git_url+"'target=\"_blank\">"+data[i].title+"</a></li>")}}else{console.log("400: Invalid request"+status)}});$('#search-highlight').hideseek({highlight:true});setTimeout(function(){$(".aplayer-list").addClass("aplayer-list-hide").children().css("text-align","left")},3000);$('.hero__scroll').on('click',function(e){$('html, body').animate({scrollTop:$(window).height()},1200)})});</script>
+<script>console.log('%c       ', 'font-size: 150px; background: url(https://ws1.sinaimg.cn/large/006nOlwNgy1fktngl8rdnj3090090myp.jpg) no-repeat;');</script>
+<script>
+    $(document).ready(function () {
+        var resource_list = "https://ultrapre.github.io/www.mmgal.com/Game_list/mygalgameList.json";
+        $.getJSON(resource_list, function (data, status) {
+            if (status) {
+                console.log(status);
+                for (let i = 0; i < data.length; i++) {
+                    $("#mygalgame_list").append("<tr><td>" + data[i].pwd + "</td><td class='list'><a href=\""+ data[i].git_url +"\" target=\"_blank\">" + data[i].title + "</a></td><td><textarea id='codecopy"+ i.toString() +"'>" + data[i].addr + "</textarea></td>" + "<td><button class=\"copy\" onclick=copy(\""+i.toString()+"\") style=\"background-color:#D9534F;border-radius:5px;color:white;\">复制链接</button></td></tr>");
+                }
+            } else {
+                console.log("400: Invalid request" + status);
+            }
+        });
+        $('body').GalMenu({
+            'menu': 'GalDropDown'
+        });
+        $('.hero__scroll').on('click', function (e) {
+            $('html, body').animate({
+                scrollTop: $(window).height()
+            }, 1200);
+        });
+    });
+	
+
+</script>
+<script type="text/javascript"> 
+function copy(i){
+var e = document.getElementById("codecopy"+i);
+e.select(); // 选择对象
+document.execCommand("Copy"); // 执行浏览器复制命令
+<!--alert("复制链接成功！");-->
+}
+</script>
 <script>var _hmt = _hmt || []; (function () { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?03707b9d88054c7fe2eb2f69bc297935"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s)})();</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108088946-1"></script><script>window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-108088946-1');</script>
 </body>
