@@ -107,7 +107,7 @@ function LoadPage(nowpage){
 				
 				
                 for (let i = 500*nowpage-500; i < finallen; i++) {
-                    $("#mygalgame_list").append("<tr><td class='list'>" + (i+1) + "</td><td><a href=\""+ data[i].locallink +"\" target=\"_blank\">" + data[i].name + "</a></td></tr>");
+                    $("#mygalgame_list").append("<tr><td class='list'>" + (i+1) + "</td><td><a href=\""+ data[i].link +"\" target=\"_blank\">" + data[i].name + "</a></td></tr>");
                 }
             } else {
                 console.log("400: Invalid request" + status);
@@ -130,7 +130,7 @@ function LoadPage(nowpage){
             if (status) {
                 console.log(status);
                 for (let i = 0; i < 500; i++) {
-                    $("#mygalgame_list").append("<tr><td class='list'>" + (i+1) + "</td><td><a href=\""+ data[i].locallink +"\" target=\"_blank\">" + data[i].name + "</a></td></tr>");
+                    $("#mygalgame_list").append("<tr><td class='list'>" + (i+1) + "</td><td><a href=\""+ data[i].link +"\" target=\"_blank\">" + data[i].name + "</a></td></tr>");
                 }
             } else {
                 console.log("400: Invalid request" + status);
