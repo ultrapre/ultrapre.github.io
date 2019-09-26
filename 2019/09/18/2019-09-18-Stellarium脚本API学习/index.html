@@ -14,7 +14,7 @@
 <meta property="og:site_name">
 <meta property="og:description" content="先把0.8更新到0.9，否则mark类不能用">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-17T15:57:09.859Z">
+<meta property="og:updated_time" content="2019-09-23T08:15:50.538Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019-09-18-Stellarium脚本API学习">
 <meta name="twitter:description" content="先把0.8更新到0.9，否则mark类不能用">
@@ -99,17 +99,226 @@
         <p>先把0.8更新到0.9，否则mark类不能用</p>
 <a id="more"></a>
 
-<p>我写的</p>
-<p>两个脚本：</p>
+<p>我写的两个脚本：</p>
 <p><a href="https://git.io/JeOKV" target="_blank" rel="noopener">https://git.io/JeOKV</a></p>
 <p><a href="https://git.io/JeOKL" target="_blank" rel="noopener">https://git.io/JeOKL</a></p>
-<p>然后参考下面两个进行学习：</p>
+<h1 id="一、脚本基本语法"><a href="#一、脚本基本语法" class="headerlink" title="一、脚本基本语法"></a>一、脚本基本语法</h1><p>Stellarium的脚本基于ECMAScript，与JavaScript非常相似。您需要的是ECMAScript文档。</p>
+<p>基于ECMAScript</p>
+<p>请先阅读 <a href="https://www.runoob.com/w3cnote/es6-concise-tutorial.html" target="_blank" rel="noopener">ECMAScript 6 简明教程</a></p>
+<p>var、 let、const 和 block</p>
+<p>列表[],push添加</p>
+<p>function Person(make, model, value)</p>
+<p>然后 <strong><a href="https://doc.qt.io/archives/qt-4.8/ecmascript.html#value-properties" target="_blank" rel="noopener">函数</a></strong></p>
+<h2 id="The-Global-Object-（1）全局对象"><a href="#The-Global-Object-（1）全局对象" class="headerlink" title="The Global Object （1）全局对象"></a>The Global Object （1）全局对象</h2><h3 id="Value-Properties"><a href="#Value-Properties" class="headerlink" title="Value Properties"></a>Value Properties</h3><ul>
+<li>NaN</li>
+<li>Infinity</li>
+<li>undefined</li>
+</ul>
+<h3 id="Function-Properties"><a href="#Function-Properties" class="headerlink" title="Function Properties"></a>Function Properties</h3><ul>
+<li>eval(x)</li>
+<li>parseInt(string, radix)</li>
+<li>parseFloat(string)</li>
+<li>isNaN(number)</li>
+<li>isFinite(number)</li>
+<li>decodeURI(encodedURI)</li>
+<li>decodeURIComponent(encodedURIComponent)</li>
+<li>encodeURI(uri)</li>
+<li>encodeURIComponent(uriComponent)</li>
+</ul>
+<h3 id="Constructor-Properties-构造类型"><a href="#Constructor-Properties-构造类型" class="headerlink" title="Constructor Properties 构造类型"></a>Constructor Properties 构造类型</h3><ul>
+<li>Object</li>
+<li>Function</li>
+<li>Array</li>
+<li>String</li>
+<li>Boolean</li>
+<li>Number</li>
+<li>Date</li>
+<li>RegExp</li>
+<li>Error</li>
+<li>EvalError</li>
+<li>RangeError</li>
+<li>ReferenceError</li>
+<li>SyntaxError</li>
+<li>TypeError</li>
+<li>URIError</li>
+</ul>
+<h3 id="Other-Properties"><a href="#Other-Properties" class="headerlink" title="Other Properties"></a>Other Properties</h3><ul>
+<li>Math</li>
+<li>JSON</li>
+</ul>
+<h2 id="Object-Objects-（2）对象的方法"><a href="#Object-Objects-（2）对象的方法" class="headerlink" title="Object Objects （2）对象的方法"></a>Object Objects （2）对象的方法</h2><h3 id="Object-Constructor"><a href="#Object-Constructor" class="headerlink" title="Object Constructor"></a>Object Constructor</h3><h4 id="Function-Properties-1"><a href="#Function-Properties-1" class="headerlink" title="Function Properties"></a>Function Properties</h4><ul>
+<li>getPrototypeOf(O)</li>
+<li>getOwnPropertyDescriptor(O, P)</li>
+<li>getOwnPropertyNames(O)</li>
+<li>create(O [, Properties])</li>
+<li>defineProperty(O, P, Attributes)</li>
+<li>defineProperties(O, Properties)</li>
+<li>keys(O)</li>
+</ul>
+<h3 id="Object-Prototype-Object"><a href="#Object-Prototype-Object" class="headerlink" title="Object Prototype Object"></a>Object Prototype Object</h3><h4 id="Function-Properties-2"><a href="#Function-Properties-2" class="headerlink" title="Function Properties"></a>Function Properties</h4><ul>
+<li>toString()</li>
+<li>toLocaleString()</li>
+<li>valueOf()</li>
+<li>hasOwnProperty(V)</li>
+<li>isPrototypeOf(V)</li>
+<li>propertyIsEnumerable(V)</li>
+</ul>
+<h2 id="Function-Objects-（3）函数的方法"><a href="#Function-Objects-（3）函数的方法" class="headerlink" title="Function Objects （3）函数的方法"></a>Function Objects （3）函数的方法</h2><h3 id="Function-Prototype-Object"><a href="#Function-Prototype-Object" class="headerlink" title="Function Prototype Object"></a>Function Prototype Object</h3><h4 id="Function-Properties-3"><a href="#Function-Properties-3" class="headerlink" title="Function Properties"></a>Function Properties</h4><ul>
+<li>toString()</li>
+<li>apply(thisArg, argArray)</li>
+<li>call(thisArg [, arg1 [, arg2, …]])</li>
+</ul>
+<h2 id="Array-Objects-（4）数组的方法"><a href="#Array-Objects-（4）数组的方法" class="headerlink" title="Array Objects （4）数组的方法"></a>Array Objects （4）数组的方法</h2><h3 id="Array-Prototype-Object"><a href="#Array-Prototype-Object" class="headerlink" title="Array Prototype Object"></a>Array Prototype Object</h3><h4 id="Function-Properties-4"><a href="#Function-Properties-4" class="headerlink" title="Function Properties"></a>Function Properties</h4><ul>
+<li>toString()</li>
+<li>toLocaleString()</li>
+<li>concat([item1 [, item2 [, …]]])</li>
+<li>join(separator)</li>
+<li>pop()</li>
+<li>push([item1 [, item2 [, …]]])</li>
+<li>reverse()</li>
+<li>shift()</li>
+<li>slice(start, end)</li>
+<li>sort(comparefn)</li>
+<li>splice(start, deleteCount[, item1 [, item2 [, …]]])</li>
+<li>unshift([item1 [, item2 [, …]]])</li>
+<li>indexOf(searchElement [, fromIndex])</li>
+<li>lastIndexOf(searchElement [, fromIndex])</li>
+<li>every(callbackfn [, thisArg])</li>
+<li>some(callbackfn [, thisArg])</li>
+<li><a href="https://doc.qt.io/archives/qt-4.8/containers.html#foreach" target="_blank" rel="noopener">forEach</a>(callbackfn [, thisArg])</li>
+<li>map(callbackfn [, thisArg])</li>
+<li>filter(callbackfn [, thisArg])</li>
+<li>reduce(callbackfn [, initialValue])</li>
+<li>reduceRight(callbackfn [, initialValue])</li>
+</ul>
+<h2 id="String-Objects-（5）重要！字符串的方法"><a href="#String-Objects-（5）重要！字符串的方法" class="headerlink" title="String Objects （5）重要！字符串的方法"></a>String Objects （5）重要！字符串的方法</h2><h3 id="String-Prototype-Object"><a href="#String-Prototype-Object" class="headerlink" title="String Prototype Object"></a>String Prototype Object</h3><h4 id="Function-Properties-5"><a href="#Function-Properties-5" class="headerlink" title="Function Properties"></a>Function Properties</h4><ul>
+<li>toString()</li>
+<li>valueOf()</li>
+<li>charAt(pos)</li>
+<li>charCodeAt(pos)</li>
+<li>concat([string1 [, string2 [, …]]])</li>
+<li>indexOf(searchString ,position)</li>
+<li>lastIndexOf(searchString, position)</li>
+<li>localeCompare(that)</li>
+<li>match(regexp)</li>
+<li>replace(searchValue, replaceValue)</li>
+<li>search(regexp)</li>
+<li>slice(start, end)</li>
+<li>split(separator, limit)</li>
+<li>substring(start, end)</li>
+<li>toLowerCase()</li>
+<li>toLocaleLowerCase()</li>
+<li>toUpperCase()</li>
+<li>toLocaleUpperCase()</li>
+<li>trim()</li>
+</ul>
+<h2 id="Boolean-Objects（6）真值的方法"><a href="#Boolean-Objects（6）真值的方法" class="headerlink" title="Boolean Objects（6）真值的方法"></a>Boolean Objects（6）真值的方法</h2><h3 id="Boolean-Prototype-Object"><a href="#Boolean-Prototype-Object" class="headerlink" title="Boolean Prototype Object"></a>Boolean Prototype Object</h3><h4 id="Function-Properties-6"><a href="#Function-Properties-6" class="headerlink" title="Function Properties"></a>Function Properties</h4><ul>
+<li>toString()</li>
+<li>valueOf()</li>
+</ul>
+<h2 id="Number-Objects（7）数字的方法"><a href="#Number-Objects（7）数字的方法" class="headerlink" title="Number Objects（7）数字的方法"></a>Number Objects（7）数字的方法</h2><h3 id="Number-Prototype-Object"><a href="#Number-Prototype-Object" class="headerlink" title="Number Prototype Object"></a>Number Prototype Object</h3><h4 id="Function-Properties-7"><a href="#Function-Properties-7" class="headerlink" title="Function Properties"></a>Function Properties</h4><ul>
+<li>toString(radix)</li>
+<li>toLocaleString()</li>
+<li>toFixed(fractionDigits)</li>
+<li>toExponential(fractionDigits)</li>
+<li>toPrecision(precision)</li>
+</ul>
+<h2 id="The-Math-Object（8）数学参数的方法"><a href="#The-Math-Object（8）数学参数的方法" class="headerlink" title="The Math Object（8）数学参数的方法"></a>The Math Object（8）数学参数的方法</h2><h3 id="Value-Properties-1"><a href="#Value-Properties-1" class="headerlink" title="Value Properties"></a>Value Properties</h3><ul>
+<li>E</li>
+<li>LN10</li>
+<li>LN2</li>
+<li>LOG2E</li>
+<li>LOG10E</li>
+<li>PI</li>
+<li>SQRT1_2</li>
+<li>SQRT2</li>
+</ul>
+<h3 id="Function-Properties-8"><a href="#Function-Properties-8" class="headerlink" title="Function Properties"></a>Function Properties</h3><ul>
+<li>abs(x)</li>
+<li>acos(x)</li>
+<li>asin(x)</li>
+<li>atan(x)</li>
+<li>atan2(y, x)</li>
+<li>ceil(x)</li>
+<li>cos(x)</li>
+<li>exp(x)</li>
+<li>floor(x)</li>
+<li>log(x)</li>
+<li>max([value1 [, value2 [, …]]])</li>
+<li>min([value1 [, value2 [, …]]])</li>
+<li>pow(x, y)</li>
+<li>random()</li>
+<li>round(x)</li>
+<li>sin(x)</li>
+<li>sqrt(x)</li>
+<li>tan(x)</li>
+</ul>
+<h2 id="Date-Objects（9）日期的方法"><a href="#Date-Objects（9）日期的方法" class="headerlink" title="Date Objects（9）日期的方法"></a>Date Objects（9）日期的方法</h2><h3 id="Date-Prototype-Object"><a href="#Date-Prototype-Object" class="headerlink" title="Date Prototype Object"></a>Date Prototype Object</h3><h4 id="Function-Properties-9"><a href="#Function-Properties-9" class="headerlink" title="Function Properties"></a>Function Properties</h4><ul>
+<li>toString()</li>
+<li>toDateString()</li>
+<li>toTimeString()</li>
+<li>toLocaleString()</li>
+<li>toLocaleDateString()</li>
+<li>toLocaleTimeString()</li>
+<li>valueOf()</li>
+<li>getTime()</li>
+<li>getFullYear()</li>
+<li>getUTCFullYear()</li>
+<li>getMonth()</li>
+<li>getUTCMonth()</li>
+<li>getDate()</li>
+<li>getUTCDate()</li>
+<li>getDay()</li>
+<li>getUTCDay()</li>
+<li>getHours()</li>
+<li>getUTCHours()</li>
+<li>getMinutes()</li>
+<li>getUTCMinutes()</li>
+<li>getSeconds()</li>
+<li>getUTCSeconds()</li>
+<li>getMilliseconds()</li>
+<li>getUTCMilliseconds()</li>
+<li>getTimeZoneOffset()</li>
+<li>setTime(time)</li>
+<li>setMilliseconds(ms)</li>
+<li>setUTCMilliseconds(ms)</li>
+<li>setSeconds(sec [, ms])</li>
+<li>setUTCSeconds(sec [, ms])</li>
+<li>setMinutes(min [, sec [, ms]])</li>
+<li>setUTCMinutes(min [, sec [, ms]])</li>
+<li>setHours(hour [, min [, sec [, ms]]])</li>
+<li>setUTCHours(hour [, min [, sec [, ms]]])</li>
+<li>setDate(date)</li>
+<li>setUTCDate(date)</li>
+<li>setMonth(month [, date])</li>
+<li>setUTCMonth(month [, date])</li>
+<li>setFullYear(year [, month [, date]])</li>
+<li>setUTCFullYear(year [, month [, date]])</li>
+<li>toUTCString()</li>
+<li>toISOString()</li>
+<li>toJSON()</li>
+</ul>
+<h2 id="RegExp-Objects（10）正则的方法"><a href="#RegExp-Objects（10）正则的方法" class="headerlink" title="RegExp Objects（10）正则的方法"></a>RegExp Objects（10）正则的方法</h2><h3 id="RegExp-Prototype-Object"><a href="#RegExp-Prototype-Object" class="headerlink" title="RegExp Prototype Object"></a>RegExp Prototype Object</h3><h4 id="Function-Properties-10"><a href="#Function-Properties-10" class="headerlink" title="Function Properties"></a>Function Properties</h4><ul>
+<li>exec(string)</li>
+<li>test(string)</li>
+<li>toString()</li>
+</ul>
+<h2 id="Error-Objects（11）错误处理的方法"><a href="#Error-Objects（11）错误处理的方法" class="headerlink" title="Error Objects（11）错误处理的方法"></a>Error Objects（11）错误处理的方法</h2><h3 id="Error-Prototype-Object"><a href="#Error-Prototype-Object" class="headerlink" title="Error Prototype Object"></a>Error Prototype Object</h3><h4 id="Value-Properties-2"><a href="#Value-Properties-2" class="headerlink" title="Value Properties"></a>Value Properties</h4><ul>
+<li>name</li>
+<li>message</li>
+</ul>
+<h4 id="Function-Properties-11"><a href="#Function-Properties-11" class="headerlink" title="Function Properties"></a>Function Properties</h4><ul>
+<li>toString()</li>
+</ul>
+<h2 id="The-JSON-Object"><a href="#The-JSON-Object" class="headerlink" title="The JSON Object"></a>The JSON Object</h2><h3 id="Function-Properties-12"><a href="#Function-Properties-12" class="headerlink" title="Function Properties"></a>Function Properties</h3><ul>
+<li>parse(text [, reviver])</li>
+<li>stringify(value [, replacer [, space]])</li>
+</ul>
+<h1 id="二、具体方法"><a href="#二、具体方法" class="headerlink" title="二、具体方法"></a>二、具体方法</h1><p>然后参考下面两个进行学习：</p>
 <p>ConstellationMgr、StelMovementMgr各种派生类的方法介绍，然而脚本只需要直接调用即可</p>
 <p><a href="https://stellarium.org/doc/0.19/scripting.html" target="_blank" rel="noopener">https://stellarium.org/doc/0.19/scripting.html</a> </p>
 <p>下面是core的各种方法</p>
 <p><a href="https://stellarium.org/doc/0.19/classStelMainScriptAPI.html" target="_blank" rel="noopener">https://stellarium.org/doc/0.19/classStelMainScriptAPI.html</a> </p>
-<p>学习其var赋值，目前未知其有没有自定义函数方法，我猜只能goto；</p>
-<p>由于是Qt开发，引用很多Qt的QString类型。</p>
 <p>ConstellationMgr 星座艺术 边界 星座线 标签<br>CustomObjectMgr 自定义对象<br>HighlightMgr 高亮标记<br>GridLinesMgr 控制方位，赤道，黄道和银河系网格的绘制，以及大圆<br>LabelMgr 允许在对象或坐标上创建自定义标签<br>MarkerMgr 允许在对象或坐标上创建自定义标记<br>LandscapeMgr 管理观察者周围环境中的所有渲染 大地大气光污染 观察者位置 亮度<br>SporadicMeteorMgr 模拟零星流星雨，随机颜色和随机辐射。<br>NebulaMgr 星系符号 名称 大小限制 星云渲染 大小限制<br>ScreenImageMgr 管理脚本的图像<br>太阳系  行星 各种<br>StarMgr 设置星星的显示<br>StelActionMgr<br>StelAudioMgr 音频<br>StelVideoMgr 视频<br>StelMovementMgr 管理头部动作和变焦操作 setEquatorialMount 转到所选对象<br>StelSkyCultureMgr<br>StelSkyDrawer<br>StelSkyLayerMgr<br>银河<br>ZodiacalLight</p>
 <p>不懂再参照别人的脚本学习就行，比如setDiskViewport方法。</p>
 
