@@ -15,7 +15,7 @@
 <meta property="og:description" content="网页在线剪藏如印象笔记有数据量限制。因此找一个离线的网页剪藏工具很有必要。相对于ctrl+s，这种工具还可以按区域剪藏，对js和css也有很好的支持，如下：">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://ultrapre.github.io/2019/10/05/2019-10-05-网页剪藏方法/1570258560572.png">
-<meta property="og:updated_time" content="2019-10-05T07:04:19.933Z">
+<meta property="og:updated_time" content="2019-10-14T16:52:57.322Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019-10-05-网页剪藏方法">
 <meta name="twitter:description" content="网页在线剪藏如印象笔记有数据量限制。因此找一个离线的网页剪藏工具很有必要。相对于ctrl+s，这种工具还可以按区域剪藏，对js和css也有很好的支持，如下：">
@@ -117,11 +117,18 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklink /j clip G:\DOWNLOAD\mx-wc</span><br></pre></td></tr></table></figure>
 
 <p>然后<code>hexo g</code>之后<code>hexo s</code>，打开<code>&lt;http://localhost:4000/clip/&gt;</code>查看效果。</p>
+<hr>
+<p><strong>clipper的数据安全：</strong></p>
+<p>MaoXian会崩溃，然后chrome重新下载恢复。</p>
+<p>但是这样我的页面历史索引会清空，然后应该安装<code>maoxian-web-clipper-native-windows-chrome</code>，安装方法有点容易误解。</p>
+<p>config.yaml里面data_dir应该为数据根目录，如果cmd运行install不行就用管理员cmd。</p>
+<p>需要重新扫描索引以前的html，需要点击插件的<code>历史-重置历史-选择文件-选择数据根目录-确认即可</code></p>
+<p>然后重新定向json到根目录。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ultrapre.github.io/2019/10/05/2019-10-05-网页剪藏方法/" data-id="ck1m55491008pkguellv6ke0f" class="article-share-link">Share</a>
+      <a data-url="http://ultrapre.github.io/2019/10/05/2019-10-05-网页剪藏方法/" data-id="ck2652rij008pn4ue18d8jfu8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,6 +136,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2019/10/14/2019-10-14-减轻hexo负重-部署外挂库页面/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019-10-14-减轻hexo负重-部署外挂库页面
+        
+      </div>
+    </a>
   
   
     <a href="/2019/10/02/自己动手丰衣足食-Galgame机翻进度检查-天坑没人埋我就来埋/" id="article-nav-older" class="article-nav-link-wrap">
@@ -184,23 +200,23 @@
       <ul>
         
           <li>
+            <a href="/2019/10/25/2019-10-25-流星-世界演绎者小测/">2019-10-25-流星-世界演绎者小测</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/17/2019-10-17-银色游玩感想/">2019-10-17-银色游玩感想</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/15/如何破解最果てのイマ/">如何破解最果てのイマ</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/14/2019-10-14-减轻hexo负重-部署外挂库页面/">2019-10-14-减轻hexo负重-部署外挂库页面</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/05/2019-10-05-网页剪藏方法/">2019-10-05-网页剪藏方法</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/02/自己动手丰衣足食-Galgame机翻进度检查-天坑没人埋我就来埋/">自己动手丰衣足食-Galgame机翻进度检查-天坑没人埋我就来埋</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/28/2019-09-28-皇姬游玩日志-1/">2019-09-28-皇姬游玩日志(1)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/28/2019-09-28-git再学习/">2019-09-28-git再学习</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/28/Gal工具学习/">Gal工具学习</a>
           </li>
         
       </ul>
@@ -256,5 +272,5 @@
 
 
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
