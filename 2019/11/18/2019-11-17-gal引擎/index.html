@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2019-11-17-gal引擎 | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="gal引擎统计与工具">
+<meta name="keywords" content="Galgame">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-11-17-gal引擎">
+<meta property="og:url" content="http://ultrapre.github.io/2019/11/18/2019-11-17-gal引擎/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="gal引擎统计与工具">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-15T09:31:47.687Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2019-11-17-gal引擎">
+<meta name="twitter:description" content="gal引擎统计与工具">
+  
+    <link rel="alternate" href="/atom.xml" title type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/myfavicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo"></a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/clip/">收藏</a>
+        
+          <a class="main-nav-link" href="/bgm.tv/index.html">黄油库</a>
+        
+          <a class="main-nav-link" href="/www.mmgal.com">汉化</a>
+        
+          <a class="main-nav-link" href="/www.2dfan.com">攻略</a>
+        
+          <a class="main-nav-link" href="/plumz.me/index.html">赏析</a>
+        
+          <a class="main-nav-link" href="/tags/Galgame">感想</a>
+        
+          <a class="main-nav-link" href="/blog.ztjal.info/index.html">解包</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ultrapre.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2019-11-17-gal引擎" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/18/2019-11-17-gal引擎/" class="article-date">
+  <time datetime="2019-11-17T15:21:27.000Z" itemprop="datePublished">2019-11-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2019-11-17-gal引擎
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>gal引擎统计与工具</p>
+<a id="more"></a>
+
+<p>目前我所知的日本galgame引擎多达两百多种，在下面的网站可以找到索引。</p>
+<p><a href="https://morkt.github.io/GARbro/supported.html" target="_blank" rel="noopener">https://morkt.github.io/GARbro/supported.html</a> </p>
+<p>目前世界上已经面世的galgame数量估计为五位数，估计均可以在vndb搜索到。Garbro给出的支持文档中的游戏名仅仅是举例，很多的游戏都没有算进去。</p>
+<p>在这里我就只以支持文档中的统计标本作为讨论范围。第一热门的引擎就是krkr了，krkr的解包教程文章在各大网站反反复复刷过，其旗下的游戏应该也是最多的。第二个，也就是最令我惊讶的引擎是椎名里绪(Shiina Rio)，旗下的游戏数量不输krkr，这个引擎的破解对于汉化组来说也是有点难度的。接下来，就是被各路汉化组在论坛发过的破解贴和github为数不多的各路引擎破解工具库所涵盖的一系列引擎，或者我实际破过有点面熟的，例如BGI，Circus，CatSystem2，Majiro，Nitro+，NScripter，Will，Liar-soft，YU-RIS，Lucifen，Silky’s，QLIE，Malie，Xuse，ExHIBIT，Favorite，Softpal，Cyberworks，N2System。。。</p>
+<p>总体来说，gal引擎百花齐放，而且也不太通用。如果要考虑自己制作galgame，想要亲自弄清楚那些大公司的程序制作经验的话，倒是推荐上面这些引擎中较为开放的SDK，比如kirikiri或者CatSystem2，当然你也可以选择Ren’Py等开源引擎或者其他小众引擎，不过不太推荐。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ultrapre.github.io/2019/11/18/2019-11-17-gal引擎/" data-id="ck5f4gr6w009638ue35h301rm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Galgame/">Galgame</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/19/2019-11-19-天文爱好者的自我修养1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019-11-19-天文爱好者的自我修养（1）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/17/2019-11-17-vndb数据库使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019-11-17-vndb数据库使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Galgame/">Galgame</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/天文/">天文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/宫崎骏/">宫崎骏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/手机/">手机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据/">数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统/">系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件/">软件</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Galgame/" style="font-size: 20px;">Galgame</a> <a href="/tags/天文/" style="font-size: 12px;">天文</a> <a href="/tags/宫崎骏/" style="font-size: 18px;">宫崎骏</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/数据/" style="font-size: 12px;">数据</a> <a href="/tags/系统/" style="font-size: 14px;">系统</a> <a href="/tags/软件/" style="font-size: 16px;">软件</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/31/目视天文学-1-基础-环境/">目视天文学(1)基础--环境</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/25/2019-12-25-天文补课2-梅西耶描述/">2019-12-25-天文补课2-梅西耶描述</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/25/2019-12-25-天文补课1/">2019-12-25-天文补课1</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/08/2019-12-08-武汉市区的深空实际目视情况/">2019-12-08-武汉市区的深空实际目视情况</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/06/2019-12-06-目视深空的影响因素/">2019-12-06-目视深空的影响因素</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Akari Sama<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/clip/" class="mobile-nav-link">收藏</a>
+  
+    <a href="/bgm.tv/index.html" class="mobile-nav-link">黄油库</a>
+  
+    <a href="/www.mmgal.com" class="mobile-nav-link">汉化</a>
+  
+    <a href="/www.2dfan.com" class="mobile-nav-link">攻略</a>
+  
+    <a href="/plumz.me/index.html" class="mobile-nav-link">赏析</a>
+  
+    <a href="/tags/Galgame" class="mobile-nav-link">感想</a>
+  
+    <a href="/blog.ztjal.info/index.html" class="mobile-nav-link">解包</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
