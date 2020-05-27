@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>2020-02-02-epub电子书转html | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="自用技术：仅针对部分epub电子书">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020-02-02-epub电子书转html">
+<meta property="og:url" content="http://ultrapre.github.io/2020/02/02/2020-02-02-epub电子书转html/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="自用技术：仅针对部分epub电子书">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-02T10:57:59.599Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2020-02-02-epub电子书转html">
+<meta name="twitter:description" content="自用技术：仅针对部分epub电子书">
+  
+    <link rel="alternate" href="/atom.xml" title type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/myfavicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo"></a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/clip/">收藏</a>
+        
+          <a class="main-nav-link" href="/bgm.tv/index.html">黄油库</a>
+        
+          <a class="main-nav-link" href="/www.mmgal.com">汉化</a>
+        
+          <a class="main-nav-link" href="/www.2dfan.com">攻略</a>
+        
+          <a class="main-nav-link" href="/plumz.me/index.html">赏析</a>
+        
+          <a class="main-nav-link" href="/tags/Galgame">感想</a>
+        
+          <a class="main-nav-link" href="/blog.ztjal.info/index.html">解包</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ultrapre.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2020-02-02-epub电子书转html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/02/2020-02-02-epub电子书转html/" class="article-date">
+  <time datetime="2020-02-02T11:47:52.000Z" itemprop="datePublished">2020-02-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2020-02-02-epub电子书转html
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>自用技术：仅针对部分epub电子书</p>
+<a id="more"></a>
+
+<p>epub改后缀zip</p>
+<p>unpack后结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">images</span><br><span class="line">META-INF</span><br><span class="line">text</span><br><span class="line">content.opf</span><br><span class="line">cover.jpeg</span><br><span class="line">mimetype</span><br><span class="line">page_styles.css</span><br><span class="line">stylesheet.css</span><br><span class="line">titlepage.xhtml</span><br><span class="line">toc.ncx</span><br><span class="line"></span><br><span class="line">text/part0000.html</span><br><span class="line">text/part0001.html</span><br><span class="line">text/part0002_split_000.html</span><br><span class="line">text/part0002_split_001.html</span><br><span class="line">text/part0003.html</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>part0000.html结构示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version='1.0' encoding='utf-8'?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span> <span class="attr">xml:lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Burnham’s Celestial Handbook<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"application/vnd.adobe-page-template+xml"</span> <span class="attr">href</span>=<span class="string">"page-template.xpgt"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"../stylesheet.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"../page_styles.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span> <span class="attr">class</span>=<span class="string">"calibre"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"image"</span> <span class="attr">id</span>=<span class="string">"page_i"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">"page_ii"</span> <span class="attr">class</span>=<span class="string">"calibre1"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"../images/00001.jpeg"</span> <span class="attr">class</span>=<span class="string">"svg"</span> <span class="attr">alt</span>=<span class="string">"image"</span>/&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>观察剩余结构差别也就在<body>之间</body></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> open(src,encoding=<span class="string">"utf-8"</span>).readlines():</span><br><span class="line">    <span class="keyword">if</span> line.startswith(<span class="string">"  &lt;body"</span>) <span class="keyword">is</span> <span class="literal">True</span>:</span><br><span class="line">        bodyflag = <span class="literal">None</span></span><br><span class="line">    <span class="keyword">elif</span> line.startswith(<span class="string">"&lt;/body&gt;"</span>) <span class="keyword">is</span> <span class="literal">True</span>:</span><br><span class="line">        bodyflag = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> bodyflag == <span class="literal">True</span>:</span><br><span class="line">        fp.write(line.replace(<span class="string">"../"</span>,<span class="string">""</span>))</span><br><span class="line">    <span class="keyword">elif</span> bodyflag == <span class="literal">None</span>:</span><br><span class="line">        bodyflag = <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<p>遍历读取拼接，再在首尾添加文本即可。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ultrapre.github.io/2020/02/02/2020-02-02-epub电子书转html/" data-id="ck8bcnma7009v74tues9fjh74" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/02/02/2020-02-02-双语对比版电子书制作/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2020-02-02-双语对比版电子书制作
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/20/2020-01-20-白刃点评/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2020-01-20-白刃点评</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Galgame/">Galgame</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/天文/">天文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/宫崎骏/">宫崎骏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/手机/">手机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据/">数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统/">系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件/">软件</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Galgame/" style="font-size: 20px;">Galgame</a> <a href="/tags/天文/" style="font-size: 12px;">天文</a> <a href="/tags/宫崎骏/" style="font-size: 18px;">宫崎骏</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/数据/" style="font-size: 12px;">数据</a> <a href="/tags/系统/" style="font-size: 14px;">系统</a> <a href="/tags/软件/" style="font-size: 16px;">软件</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/24/2020-02-24-csv错误读取编码/">2020-02-24-csv错误读取编码</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/21/2020-02-21-天爱的星系手册/">2020-02-21-天爱的星系手册</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/19/2020-02-19-软件备份/">2020-02-19-软件备份</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/19/2020-02-19-屏幕亮度bugfix/">2020-02-19-屏幕亮度bugfix</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/10/2020-02-10-PC疑难杂症小记/">2020-02-10-PC疑难杂症小记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Akari Sama<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/clip/" class="mobile-nav-link">收藏</a>
+  
+    <a href="/bgm.tv/index.html" class="mobile-nav-link">黄油库</a>
+  
+    <a href="/www.mmgal.com" class="mobile-nav-link">汉化</a>
+  
+    <a href="/www.2dfan.com" class="mobile-nav-link">攻略</a>
+  
+    <a href="/plumz.me/index.html" class="mobile-nav-link">赏析</a>
+  
+    <a href="/tags/Galgame" class="mobile-nav-link">感想</a>
+  
+    <a href="/blog.ztjal.info/index.html" class="mobile-nav-link">解包</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
