@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>手机Stellarium数据修正 | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="手机Stellarium里的深空天体数据错误很多，以及精度很差。 另外系统很low，只绑定了ngcic天体，像M45这种强行绑定了一个错误的NGC编号。这样就也不能显示煤袋星云以及各种没有NGC编号的Cr天体等等了。 我就自己整了一个新的版本。">
+<meta name="keywords" content="天文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="手机Stellarium数据修正">
+<meta property="og:url" content="http://ultrapre.github.io/2020/04/10/2020-04-10-手机Stellarium数据修正/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="手机Stellarium里的深空天体数据错误很多，以及精度很差。 另外系统很low，只绑定了ngcic天体，像M45这种强行绑定了一个错误的NGC编号。这样就也不能显示煤袋星云以及各种没有NGC编号的Cr天体等等了。 我就自己整了一个新的版本。">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://ultrapre.github.io/2020/04/10/2020-04-10-手机Stellarium数据修正/1586532971225.jpg">
+<meta property="og:updated_time" content="2023-08-29T15:23:46.287Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="手机Stellarium数据修正">
+<meta name="twitter:description" content="手机Stellarium里的深空天体数据错误很多，以及精度很差。 另外系统很low，只绑定了ngcic天体，像M45这种强行绑定了一个错误的NGC编号。这样就也不能显示煤袋星云以及各种没有NGC编号的Cr天体等等了。 我就自己整了一个新的版本。">
+<meta name="twitter:image" content="http://ultrapre.github.io/2020/04/10/2020-04-10-手机Stellarium数据修正/1586532971225.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/myfavicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo"></a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/clip/">收藏</a>
+        
+          <a class="main-nav-link" href="/bgm.tv/index.html">黄油库</a>
+        
+          <a class="main-nav-link" href="/www.mmgal.com">汉化</a>
+        
+          <a class="main-nav-link" href="/www.2dfan.com">攻略</a>
+        
+          <a class="main-nav-link" href="/plumz.me/index.html">赏析</a>
+        
+          <a class="main-nav-link" href="/tags/Galgame">感想</a>
+        
+          <a class="main-nav-link" href="/blog.ztjal.info/index.html">解包</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ultrapre.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2020-04-10-手机Stellarium数据修正" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/10/2020-04-10-手机Stellarium数据修正/" class="article-date">
+  <time datetime="2020-04-10T15:42:29.000Z" itemprop="datePublished">2020-04-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      手机Stellarium数据修正
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>手机Stellarium里的深空天体数据错误很多，以及精度很差。</p>
+<p>另外系统很low，只绑定了ngcic天体，像M45这种强行绑定了一个错误的NGC编号。这样就也不能显示煤袋星云以及各种没有NGC编号的Cr天体等等了。</p>
+<p>我就自己整了一个新的版本。</p>
+<a id="more"></a>
+
+
+<p>download：</p>
+<p><strong>数据来源：</strong>目前最正确的NGCIC数据</p>
+<p><a href="http://www.klima-luft.de/steinicke/ngcic/ngcic_e.htm" target="_blank" rel="noopener">http://www.klima-luft.de/steinicke/ngcic/ngcic_e.htm</a></p>
+<p>经过本人整理之后生成了新的NGCIC目录数据。相对以前的版本，修复了所有DSO的时角+赤纬+星等+尺寸+类型，新增了2574个NGC/IC，关联了Mel/Cr（可直接搜索），去除了重复编号的DSO。</p>
+<p>我还新增了192个没有NGCIC编号的疏散星团， 64个碳星。既然只能靠NGCIC索引的，那只能使用IC剩余的空白编号来对应。使用的编号范围 IC9000 - IC9255 。</p>
+<p>对碳星的说明：</p>
+<p>例如R2-1B是指推荐2寸口径观测，越大星等越暗，在2寸观测目录中小编号排第1，B是评级，说明如下。</p>
+<table>
+<thead>
+<tr>
+<th>评级</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SS</td>
+<td>欣德深红星</td>
+</tr>
+<tr>
+<td>S</td>
+<td>红色或较深橘红色，推荐</td>
+</tr>
+<tr>
+<td>A</td>
+<td>较浅橘红色</td>
+</tr>
+<tr>
+<td>B</td>
+<td>较深橘黄色/橘色，不红</td>
+</tr>
+<tr>
+<td>C</td>
+<td>较浅橘黄色</td>
+</tr>
+</tbody></table>
+<p>示例如下（来自刀锋兄整理的极红星星表）：</p>
+<p><img src="/2020/04/10/2020-04-10-手机Stellarium数据修正/1586532971225.jpg" alt="1586532971225"></p>
+<p>附：生成ngc2000.dat的代码(Qt源码)：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QDebug&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QFile&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QString&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QtCore/qmath.h&gt;</span></span></span><br><span class="line">QString csvfile = <span class="string">"ngcic.csv"</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">dumpNGC</span><span class="params">(<span class="keyword">const</span> QString&amp; catNGC)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">bool</span> isIc;</span><br><span class="line">    <span class="keyword">int</span> nb;</span><br><span class="line">    <span class="keyword">float</span> ra, dec;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> type;</span><br><span class="line">    <span class="keyword">float</span> mag;                      <span class="comment">// Apparent magnitude</span></span><br><span class="line">    <span class="keyword">float</span> angularSize;              <span class="comment">// Angular size in degree</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> totalRecords=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">const</span> QString <span class="title">FILE_PATH</span><span class="params">(csvfile)</span></span>;</span><br><span class="line">    <span class="function">QFile <span class="title">csvFile</span><span class="params">(FILE_PATH)</span></span>;</span><br><span class="line">    QStringList CSVList;</span><br><span class="line">    CSVList.clear();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (csvFile.open(QIODevice::ReadWrite))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function">QTextStream <span class="title">stream</span><span class="params">(&amp;csvFile)</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (!stream.atEnd())</span><br><span class="line">        &#123;</span><br><span class="line">            CSVList.push_back(stream.readLine());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        csvFile.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**/</span></span><br><span class="line">    <span class="function">QFile <span class="title">in</span><span class="params">(catNGC)</span></span>;</span><br><span class="line">    <span class="keyword">if</span> (!in.open(QIODevice::WriteOnly))</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="function">QDataStream <span class="title">ins</span><span class="params">(&amp;in)</span></span>;</span><br><span class="line">    ins.setVersion(QDataStream::Qt_4_5);</span><br><span class="line">    <span class="comment">/**/</span></span><br><span class="line"></span><br><span class="line">    Q_FOREACH(QString str, CSVList)</span><br><span class="line">    &#123;</span><br><span class="line">        isIc = str.split(<span class="string">","</span>)[<span class="number">0</span>] == <span class="string">"NGC"</span> ? <span class="literal">false</span> : <span class="literal">true</span>;</span><br><span class="line">        nb = str.split(<span class="string">","</span>)[<span class="number">1</span>].toInt();</span><br><span class="line">        ra = str.split(<span class="string">","</span>)[<span class="number">2</span>].toFloat();</span><br><span class="line">        dec = str.split(<span class="string">","</span>)[<span class="number">3</span>].toFloat();</span><br><span class="line">        mag = str.split(<span class="string">","</span>)[<span class="number">4</span>].toFloat();</span><br><span class="line">        angularSize = str.split(<span class="string">","</span>)[<span class="number">5</span>].toFloat();</span><br><span class="line">        type = str.split(<span class="string">","</span>)[<span class="number">6</span>].toInt();</span><br><span class="line"></span><br><span class="line">        ins &lt;&lt; isIc &lt;&lt; nb &lt;&lt; ra &lt;&lt; dec &lt;&lt; mag &lt;&lt; angularSize &lt;&lt; type;</span><br><span class="line"></span><br><span class="line">       <span class="comment">// qDebug()&lt;&lt; isIc &lt;&lt; nb &lt;&lt; ra &lt;&lt; dec &lt;&lt; mag &lt;&lt; angularSize &lt;&lt; type;</span></span><br><span class="line">        ++totalRecords;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    in.close();</span><br><span class="line">    <span class="comment">//qDebug() &lt;&lt; "Dumped" &lt;&lt; totalRecords &lt;&lt; "NGC records";</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MainWindow::on_pushButton_2_clicked</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    dumpNGC(<span class="string">"ngc2000.dat"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ultrapre.github.io/2020/04/10/2020-04-10-手机Stellarium数据修正/" data-id="cllwcy6rx001lw4wffuu3j2yp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/天文/">天文</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/11/2020-04-11-猎户座之剑/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          猎户座之剑
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/10/2020-04-10-最适合入门观测的深空天体/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">最适合入门观测的深空天体</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Galgame/">Galgame</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/天文/">天文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/宫崎骏/">宫崎骏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/手机/">手机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据/">数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统/">系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件/">软件</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Galgame/" style="font-size: 18.33px;">Galgame</a> <a href="/tags/天文/" style="font-size: 20px;">天文</a> <a href="/tags/宫崎骏/" style="font-size: 16.67px;">宫崎骏</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/数据/" style="font-size: 11.67px;">数据</a> <a href="/tags/系统/" style="font-size: 13.33px;">系统</a> <a href="/tags/软件/" style="font-size: 15px;">软件</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/30/2020-08-14-美少女万华镜5剧透感想/">美少女万华镜5剧透感想</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/28/2020-05-28-星表如数家珍/">星表如数家珍</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/28/2020-05-28-SkySafari真正上手/">SkySafari真正上手</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/28/2020-05-28-DeepSkyLog/">DeepSkyLog</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/2020-05-27-2月II/">2月II</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 Akari Sama<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/clip/" class="mobile-nav-link">收藏</a>
+  
+    <a href="/bgm.tv/index.html" class="mobile-nav-link">黄油库</a>
+  
+    <a href="/www.mmgal.com" class="mobile-nav-link">汉化</a>
+  
+    <a href="/www.2dfan.com" class="mobile-nav-link">攻略</a>
+  
+    <a href="/plumz.me/index.html" class="mobile-nav-link">赏析</a>
+  
+    <a href="/tags/Galgame" class="mobile-nav-link">感想</a>
+  
+    <a href="/blog.ztjal.info/index.html" class="mobile-nav-link">解包</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
