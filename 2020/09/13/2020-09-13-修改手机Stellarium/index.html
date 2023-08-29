@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>修改手机Stellarium | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="修改前提： 必须用Linux版本Qt：qt-opensource-linux-x64-5.12.3.run 指南：https://doc.qt.io/qt-5/android-getting-started.html studio：https://developer.android.com/studio/#downloads">
+<meta name="keywords" content="天文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="修改手机Stellarium">
+<meta property="og:url" content="http://ultrapre.github.io/2020/09/13/2020-09-13-修改手机Stellarium/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="修改前提： 必须用Linux版本Qt：qt-opensource-linux-x64-5.12.3.run 指南：https://doc.qt.io/qt-5/android-getting-started.html studio：https://developer.android.com/studio/#downloads">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2023-08-29T16:02:44.929Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="修改手机Stellarium">
+<meta name="twitter:description" content="修改前提： 必须用Linux版本Qt：qt-opensource-linux-x64-5.12.3.run 指南：https://doc.qt.io/qt-5/android-getting-started.html studio：https://developer.android.com/studio/#downloads">
+  
+    <link rel="alternate" href="/atom.xml" title type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/myfavicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo"></a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/clip/">收藏</a>
+        
+          <a class="main-nav-link" href="/bgm.tv/index.html">黄油库</a>
+        
+          <a class="main-nav-link" href="/www.mmgal.com">汉化</a>
+        
+          <a class="main-nav-link" href="/www.2dfan.com">攻略</a>
+        
+          <a class="main-nav-link" href="/plumz.me/index.html">赏析</a>
+        
+          <a class="main-nav-link" href="/tags/Galgame">感想</a>
+        
+          <a class="main-nav-link" href="/blog.ztjal.info/index.html">解包</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ultrapre.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2020-09-13-修改手机Stellarium" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/13/2020-09-13-修改手机Stellarium/" class="article-date">
+  <time datetime="2020-09-13T08:34:27.000Z" itemprop="datePublished">2020-09-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      修改手机Stellarium
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>修改前提：</p>
+<p>必须用Linux版本Qt：qt-opensource-linux-x64-5.12.3.run</p>
+<p>指南：<a href="https://doc.qt.io/qt-5/android-getting-started.html" target="_blank" rel="noopener">https://doc.qt.io/qt-5/android-getting-started.html</a></p>
+<p>studio：<a href="https://developer.android.com/studio/#downloads" target="_blank" rel="noopener">https://developer.android.com/studio/#downloads</a></p>
+<a id="more"></a>
+
+
+<p>android-studio-ide-193.6514223-linux.tar.gz</p>
+<p>然后非root：bin/stdio.sh，安装的都在/home/silas/Android</p>
+<p>NDK：<a href="https://developer.android.com/ndk/downloads/older_releases" target="_blank" rel="noopener">https://developer.android.com/ndk/downloads/older_releases</a></p>
+<p>sdk地址：/home/silas/Android/Sdk</p>
+<p>NDK：android-ndk-r19c-linux-x86_64.zip解压的地址。</p>
+<p>jdk：jdk-8u251-linux-x64.tar.gz</p>
+<p>copy src/config.h as moc_predefs.h</p>
+<p><code>#org.gradle.java.home=/usr/lib/jvm/java-8-openjdk</code> in gradle.properties</p>
+<hr>
+<p>修改Stellarium</p>
+<p>java -jar apktool.jar -r d test1.apk -o test1 </p>
+<p>java -jar E:\PORTABLE\cmder\apktool.jar -r d test1.apk -o test1 </p>
+<p>java -jar apktool.jar b test1</p>
+<p>java -jar signapk.jar testkey.x509.pem testkey.pk8 test1.apk test1_signed.apk</p>
+<p>adb uninstall </p>
+<p>类型</p>
+<p><strong>0 Gxy</strong></p>
+<p><strong>1 OCL</strong></p>
+<p><strong>2 GCL</strong></p>
+<p><strong>3 Nb</strong></p>
+<p><strong>4 PN</strong></p>
+<p>5 DN</p>
+<p><strong>7 C+N</strong></p>
+<p><strong>8 未知 NF</strong></p>
+<p>6</p>
+<p>9</p>
+<p>星表修正</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>RA</th>
+<th>#N/A</th>
+<th>#N/A</th>
+<th>DEC</th>
+<th>#N/A</th>
+<th>#N/A</th>
+<th>MAG</th>
+<th>#N/A</th>
+<th>#N/A</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NGC281</td>
+<td>0.230383</td>
+<td>0.230805</td>
+<td>0.000422</td>
+<td>0.988147</td>
+<td>0.988293</td>
+<td>0.000146</td>
+<td>7</td>
+<td>7</td>
+<td>0</td>
+</tr>
+<tr>
+<td>NGC1770</td>
+<td>1.29591</td>
+<td>1.297216</td>
+<td>0.001306</td>
+<td>-1.1941</td>
+<td>-1.19407</td>
+<td>3.3E-05</td>
+<td>9</td>
+<td>9</td>
+<td>0</td>
+</tr>
+<tr>
+<td>NGC1829</td>
+<td>1.3295</td>
+<td>1.330624</td>
+<td>0.001124</td>
+<td>-1.1877</td>
+<td>-1.18779</td>
+<td>-9.4E-05</td>
+<td>8</td>
+<td>8</td>
+<td>0</td>
+</tr>
+<tr>
+<td>NGC2175</td>
+<td>1.61356</td>
+<td>1.612873</td>
+<td>-0.00069</td>
+<td>0.354593</td>
+<td>0.357589</td>
+<td>0.002996</td>
+<td>6.8</td>
+<td>6.8</td>
+<td>0</td>
+</tr>
+<tr>
+<td>NGC2467</td>
+<td>2.06211</td>
+<td>2.061379</td>
+<td>-0.00073</td>
+<td>-0.46048</td>
+<td>-0.46141</td>
+<td>-0.00093</td>
+<td>7</td>
+<td>7.1</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>NGC3324</td>
+<td>2.78075</td>
+<td>2.78084</td>
+<td>9.04E-05</td>
+<td>-1.02334</td>
+<td>-1.02336</td>
+<td>-1.9E-05</td>
+<td>6.7</td>
+<td>6.7</td>
+<td>0</td>
+</tr>
+<tr>
+<td>NGC4230</td>
+<td>3.21708</td>
+<td>3.216933</td>
+<td>-0.00015</td>
+<td>-0.96226</td>
+<td>-0.96144</td>
+<td>0.000814</td>
+<td>9</td>
+<td>9.4</td>
+<td>0.4</td>
+</tr>
+<tr>
+<td>IC1396</td>
+<td>5.66839</td>
+<td>5.66752</td>
+<td>-0.00087</td>
+<td>1.00356</td>
+<td>1.00337</td>
+<td>-0.00019</td>
+<td>3.5</td>
+<td>3.5</td>
+<td>0</td>
+</tr>
+<tr>
+<td>IC5146</td>
+<td>5.73079</td>
+<td>5.730789</td>
+<td>-1.4E-06</td>
+<td>0.824959</td>
+<td>0.824959</td>
+<td>-4E-08</td>
+<td>7.2</td>
+<td>7.2</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>Cr修正</p>
+<p>NGC3632 = NGC3626</p>
+<table>
+<thead>
+<tr>
+<th>NGC6259</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NGC6383</td>
+<td></td>
+</tr>
+<tr>
+<td>NGC6885</td>
+<td></td>
+</tr>
+<tr>
+<td>NGC7234</td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>NGC</th>
+<th>6222</th>
+<th>4.41001</th>
+<th>-0.78104</th>
+<th>10</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NGC</td>
+<td>6374</td>
+<td>4.59153</td>
+<td>-0.56898</td>
+<td>9</td>
+<td>0.05</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NGC</td>
+<td>6882</td>
+<td>5.28704</td>
+<td>0.463385</td>
+<td>8.1</td>
+<td>0.3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NGC</td>
+<td>7235</td>
+<td>5.81456</td>
+<td>0.999783</td>
+<td>7.7</td>
+<td>0.066667</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>总共12624，10051</p>
+<p>手机版Stellarium：修复了所有DSO的时角+赤纬+星等+尺寸+类型，新增了2574个NGC/IC，关联了Mel/Cr（可直接搜索），去除了重复编号的DSO</p>
+<p>工具：</p>
+<p><a href="https://pan.baidu.com/s/1o8CyGdG?fid=1062265756117136" target="_blank" rel="noopener">https://pan.baidu.com/s/1o8CyGdG?fid=1062265756117136</a> </p>
+<p>“C:\Qt\Qt5.8.0\5.8\mingw53_32\bin\windeployqt.exe” NGCIC.exe</p>
+<pre><code>//! @enum NebulaType Nebula types
+enum NebulaType
+{
+    NebGx=0,     //!&lt; Galaxy*
+    NebOc=1,     //!&lt; Open star cluster*
+    NebGc=2,     //!&lt; Globular star cluster, usually in the Milky Way Galaxy*
+    NebN=3,      //!&lt; Bright emission or reflection nebula*
+    NebPn=4,     //!&lt; Planetary nebula*
+    NebDn=5,     //!&lt; ??? Dark Nebula?      Does not exist in current catalog*
+    NebIg=6,     //!&lt; ??? Irregular Galaxy? Does not exist in current catalog
+    NebCn=7,     //!&lt; Cluster associated with nebulosity*
+    NebUnknown=8 //!&lt; Unknown type, catalog errors, &quot;Unidentified Southern Objects&quot; etc.*
+};
+
+    switch(nType)
+    {
+        case NebGx:
+            wsType = q_(&quot;Galaxy&quot;);
+            break;
+        case NebOc:
+            wsType = q_(&quot;Open cluster&quot;);
+            break;
+        case NebGc:
+            wsType = q_(&quot;Globular cluster&quot;);
+            break;
+        case NebN:
+            wsType = q_(&quot;Nebula&quot;);
+            break;
+        case NebPn:
+            wsType = q_(&quot;Planetary nebula&quot;);
+            break;
+        case NebDn:
+            wsType = q_(&quot;Dark Nebula&quot;);
+            break;
+        case NebCn:
+            wsType = q_(&quot;Cluster associated with nebulosity&quot;);
+            break;
+        case NebUnknown:
+            wsType = q_(&quot;Unknown&quot;);
+            break;
+        default:
+            wsType = q_(&quot;Undocumented type&quot;);
+            break;
+    }</code></pre><hr>
+<p>实战</p>
+<p>Qt 5.12.8 armv7</p>
+<p>jdk-8u251-windows-x64.exe</p>
+<p>sdk最新 <a href="https://www.androiddevtools.cn/" target="_blank" rel="noopener">https://www.androiddevtools.cn/</a> </p>
+<p>ndk版本：android-ndk-r21-windows-x86_64 （说明：<a href="https://doc.qt.io/qt-5/android-getting-started.html" target="_blank" rel="noopener">https://doc.qt.io/qt-5/android-getting-started.html</a> ）</p>
+<p><a href="https://github.com/chengxinlun/Stellarium-android" target="_blank" rel="noopener">https://github.com/chengxinlun/Stellarium-android</a> 复制config.h到build目录moc_predefs.h</p>
+<p><a href="https://blog.csdn.net/zxc514257857/article/details/73500775/" target="_blank" rel="noopener">https://blog.csdn.net/zxc514257857/article/details/73500775/</a> </p>
+<p><a href="https://blog.csdn.net/BADAO_LIUMANG_QIZHI/article/details/81479587" target="_blank" rel="noopener">https://blog.csdn.net/BADAO_LIUMANG_QIZHI/article/details/81479587</a> </p>
+<p>编译要用avd版本，release</p>
+<hr>
+<p>原来手机Stellarium和电脑Stellarium一伙儿的。</p>
+<p>行星进入视场导致旁边的恒星和DSO消光，是因为开启了 dynamic eye adaptation</p>
+<p>在github的库里面搜索，发现绑定的是这个控件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">src/gui/viewDialog.ui</span><br><span class="line"></span><br><span class="line">&lt;widget class=&quot;QCheckBox&quot; name=&quot;adaptationCheckbox&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这个控件的名称叫adaptationCheckbox，继续搜索发现跟两个变量有关bool flagAdaptationMain; StelSkyDrawer.flagLuminanceAdaptation；</p>
+<p>使用全局搜索，发现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">skyd-&gt;setFlagLuminanceAdaptation(false); //fixed</span><br><span class="line">bool flagLuminanceAdaptation = false; //fixed</span><br></pre></td></tr></table></figure>
+
+<p>改了之后编译依然没用。</p>
+<p>一不做二不休，干脆把和FlagLuminanceAdaptation有关的set get都改了，运行完成功了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">void setFlagLuminanceAdaptation(bool b) &#123;flagLuminanceAdaptation=false;&#125; //silas =b</span><br><span class="line">bool getFlagLuminanceAdaptation() const &#123;return false;&#125; //silas fixed flagLuminanceAdaptation</span><br></pre></td></tr></table></figure>
+
+<p>修改中文星名</p>
+<p>mobileData\skycultures\chinese\star_names.fab</p>
+<hr>
+<p>追加SAC数据库/版本同步更新：</p>
+<p>增加功能：输入数字弹出NGC</p>
+<p>没有”sh\r”</p>
+<h2 id="别再把项目先git-clone到windows下再复制到Linux下了！-直接git-clone到Linux下-LF和CRLF够你喝一壶的"><a href="#别再把项目先git-clone到windows下再复制到Linux下了！-直接git-clone到Linux下-LF和CRLF够你喝一壶的" class="headerlink" title="别再把项目先git clone到windows下再复制到Linux下了！ 直接git clone到Linux下 LF和CRLF够你喝一壶的"></a>别再把项目先git clone到windows下再复制到Linux下了！ 直接git clone到Linux下 LF和CRLF够你喝一壶的</h2><p>更新pro文件：参照raymas</p>
+<p>下载 Downloading <a href="https://services.gradle.org/distributions/gradle-5.6.4-bin.zip" target="_blank" rel="noopener">https://services.gradle.org/distributions/gradle-5.6.4-bin.zip</a></p>
+<p>注释  minSdkVersion = qtMinSdkVersion、targetSdkVersion = qtTargetSdkVersion</p>
+<p>补全功能：（//silas）</p>
+<p>NebulaMgr.cpp</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">	Nebula::texCircle = StelTextureSP();</span><br><span class="line">	Nebula::texCircleLarge = StelTextureSP();</span><br><span class="line">	Nebula::texRegion = StelTextureSP();</span><br><span class="line">	Nebula::texGalaxy = StelTextureSP();</span><br><span class="line">	Nebula::texGalaxyLarge = StelTextureSP();</span><br><span class="line">	Nebula::texOpenCluster = StelTextureSP();</span><br><span class="line">	Nebula::texOpenClusterLarge = StelTextureSP();</span><br><span class="line">	Nebula::texOpenClusterXLarge = StelTextureSP();</span><br><span class="line">	Nebula::texGlobularCluster = StelTextureSP();</span><br><span class="line">	Nebula::texGlobularClusterLarge = StelTextureSP();</span><br><span class="line">	Nebula::texPlanetaryNebula = StelTextureSP();</span><br><span class="line">	Nebula::texDiffuseNebula = StelTextureSP();</span><br><span class="line">	Nebula::texDiffuseNebulaLarge = StelTextureSP();</span><br><span class="line">	Nebula::texDiffuseNebulaXLarge = StelTextureSP();</span><br><span class="line">	Nebula::texDarkNebula = StelTextureSP();</span><br><span class="line">	Nebula::texDarkNebulaLarge = StelTextureSP();</span><br><span class="line">	Nebula::texOpenClusterWithNebulosity = StelTextureSP();</span><br><span class="line">	Nebula::texOpenClusterWithNebulosityLarge = StelTextureSP();</span><br><span class="line">	</span><br><span class="line">	---</span><br><span class="line">	</span><br><span class="line">		Nebula::texCircle		= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb.png&quot;);</span><br><span class="line">	// Load circle texture for large DSO</span><br><span class="line">	Nebula::texCircleLarge	= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_lrg.png&quot;);</span><br><span class="line">	// Load dashed shape texture</span><br><span class="line">	Nebula::texRegion		= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_reg.png&quot;);</span><br><span class="line">	// Load ellipse texture</span><br><span class="line">	Nebula::texGalaxy		= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_gal.png&quot;);</span><br><span class="line">	// Load ellipse texture for large galaxies</span><br><span class="line">	Nebula::texGalaxyLarge		= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_gal_lrg.png&quot;);</span><br><span class="line">	// Load open cluster marker texture</span><br><span class="line">	Nebula::texOpenCluster		= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_ocl.png&quot;);</span><br><span class="line">	// Load open cluster marker texture for large objects</span><br><span class="line">	Nebula::texOpenClusterLarge	= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_ocl_lrg.png&quot;);</span><br><span class="line">	// Load open cluster marker texture for extra large objects</span><br><span class="line">	Nebula::texOpenClusterXLarge	= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_ocl_xlrg.png&quot;);</span><br><span class="line">	// Load globular cluster marker texture</span><br><span class="line">	Nebula::texGlobularCluster	= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_gcl.png&quot;);</span><br><span class="line">	// Load globular cluster marker texture for large GCls</span><br><span class="line">	Nebula::texGlobularClusterLarge	= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_gcl_lrg.png&quot;);</span><br><span class="line">	// Load planetary nebula marker texture</span><br><span class="line">	Nebula::texPlanetaryNebula	= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_pnb.png&quot;);</span><br><span class="line">	// Load diffuse nebula marker texture</span><br><span class="line">	Nebula::texDiffuseNebula	= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_dif.png&quot;);</span><br><span class="line">	// Load diffuse nebula marker texture for large DSO</span><br><span class="line">	Nebula::texDiffuseNebulaLarge	= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_dif_lrg.png&quot;);</span><br><span class="line">	// Load diffuse nebula marker texture for extra large DSO</span><br><span class="line">	Nebula::texDiffuseNebulaXLarge	= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_dif_xlrg.png&quot;);</span><br><span class="line">	// Load dark nebula marker texture</span><br><span class="line">	Nebula::texDarkNebula		= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_drk.png&quot;);</span><br><span class="line">	// Load dark nebula marker texture for large DSO</span><br><span class="line">	Nebula::texDarkNebulaLarge	= StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_drk_lrg.png&quot;);</span><br><span class="line">	// Load Ocl/Nebula marker texture</span><br><span class="line">	Nebula::texOpenClusterWithNebulosity = StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_ocln.png&quot;);</span><br><span class="line">	// Load Ocl/Nebula marker texture for large objects</span><br><span class="line">	Nebula::texOpenClusterWithNebulosityLarge = StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/neb_ocln_lrg.png&quot;);</span><br><span class="line">	// Load pointer texture</span><br><span class="line">	texPointer = StelApp::getInstance().getTextureManager().createTexture(StelFileMgr::getInstallationDir()+&quot;/textures/pointeur5.png&quot;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">----</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">nb = record.mid(38,6).toInt();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">if (n-&gt;IC_nb==0 || n-&gt;IC_nb&gt;5386) continue;</span><br></pre></td></tr></table></figure>
+
+<p>StelFileMgr.cpp findFile寻找外置ngc2000.dat<br>main.cpp -<br>Nebula.cpp +++</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">StelTextureSP Nebula::texCircle;</span><br><span class="line">StelTextureSP Nebula::texCircleLarge;</span><br><span class="line">StelTextureSP Nebula::texRegion;</span><br><span class="line">StelTextureSP Nebula::texGalaxy;</span><br><span class="line">StelTextureSP Nebula::texGalaxyLarge;</span><br><span class="line">StelTextureSP Nebula::texOpenCluster;</span><br><span class="line">StelTextureSP Nebula::texOpenClusterLarge;</span><br><span class="line">StelTextureSP Nebula::texOpenClusterXLarge;</span><br><span class="line">StelTextureSP Nebula::texGlobularCluster;</span><br><span class="line">StelTextureSP Nebula::texGlobularClusterLarge;</span><br><span class="line">StelTextureSP Nebula::texPlanetaryNebula;</span><br><span class="line">StelTextureSP Nebula::texDiffuseNebula;</span><br><span class="line">StelTextureSP Nebula::texDiffuseNebulaLarge;</span><br><span class="line">StelTextureSP Nebula::texDiffuseNebulaXLarge;</span><br><span class="line">StelTextureSP Nebula::texDarkNebula;</span><br><span class="line">StelTextureSP Nebula::texDarkNebulaLarge;</span><br><span class="line">StelTextureSP Nebula::texOpenClusterWithNebulosity;</span><br><span class="line">StelTextureSP Nebula::texOpenClusterWithNebulosityLarge;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">switch (nType)</span><br><span class="line">	&#123;</span><br><span class="line">		case NebGx:</span><br><span class="line">		case NebIGx:</span><br><span class="line">		case NebAGx:</span><br><span class="line">		case NebQSO:</span><br><span class="line">		case NebPossQSO:</span><br><span class="line">		case NebBLL:</span><br><span class="line">		case NebBLA:</span><br><span class="line">		case NebRGx:</span><br><span class="line">		case NebGxCl:			</span><br><span class="line">			Nebula::texGalaxy-&gt;bind();</span><br><span class="line">			break;</span><br><span class="line">		case NebOc:</span><br><span class="line">		case NebSA:</span><br><span class="line">		case NebSC:</span><br><span class="line">		case NebCl:</span><br><span class="line">			Nebula::texOpenCluster-&gt;bind();</span><br><span class="line">			break;</span><br><span class="line">		case NebGc:</span><br><span class="line">			Nebula::texGlobularCluster-&gt;bind();</span><br><span class="line">			break;</span><br><span class="line">		case NebN:</span><br><span class="line">		case NebHII:</span><br><span class="line">		case NebMolCld:</span><br><span class="line">		case NebYSO:</span><br><span class="line">		case NebRn:		</span><br><span class="line">		case NebSNR:</span><br><span class="line">		case NebBn:</span><br><span class="line">		case NebEn:</span><br><span class="line">		case NebSNC:</span><br><span class="line">		case NebSNRC:</span><br><span class="line">			Nebula::texDiffuseNebula-&gt;bind();</span><br><span class="line">			break;</span><br><span class="line">		case NebPn:</span><br><span class="line">		case NebPossPN:</span><br><span class="line">		case NebPPN:</span><br><span class="line">			Nebula::texPlanetaryNebula-&gt;bind();</span><br><span class="line">			break;</span><br><span class="line">		case NebDn:</span><br><span class="line">			Nebula::texDarkNebula-&gt;bind();</span><br><span class="line">			break;</span><br><span class="line">		case NebCn:</span><br><span class="line">			Nebula::texOpenClusterWithNebulosity-&gt;bind();</span><br><span class="line">			break;</span><br><span class="line">		case NebRegion:</span><br><span class="line">			Nebula::texRegion-&gt;bind();</span><br><span class="line">			break;</span><br><span class="line">		//case NebEMO:</span><br><span class="line">		//case NebStar:</span><br><span class="line">		//case NebSymbioticStar:</span><br><span class="line">		//case NebEmissionLineStar:</span><br><span class="line">		default:</span><br><span class="line">			Nebula::texCircle-&gt;bind();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	---</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">			case NebGx    :</span><br><span class="line">			wsType = q_(&quot;Galaxy&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebAGx   :</span><br><span class="line">			wsType = q_(&quot;active galaxy&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebRGx   :</span><br><span class="line">			wsType = q_(&quot;radio galaxy&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebIGx   :</span><br><span class="line">			wsType = q_(&quot;interacting galaxy&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebQSO   :</span><br><span class="line">			wsType = q_(&quot;quasar&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebCl    :</span><br><span class="line">			wsType = q_(&quot;star cluster&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebOc    :</span><br><span class="line">			wsType = q_(&quot;Open cluster&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebGc    :</span><br><span class="line">			wsType = q_(&quot;Globular cluster&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebSA    :</span><br><span class="line">			wsType = q_(&quot;stellar association&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebSC    :</span><br><span class="line">			wsType = q_(&quot;star cloud&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebN     :</span><br><span class="line">			wsType = q_(&quot;Nebula&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebPn    :</span><br><span class="line">			wsType = q_(&quot;Planetary nebula&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebDn    :</span><br><span class="line">			wsType = q_(&quot;Dark Nebula&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebRn    :</span><br><span class="line">			wsType = q_(&quot;reflection nebula&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebBn    :</span><br><span class="line">			wsType = q_(&quot;bipolar nebula&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebEn    :</span><br><span class="line">			wsType = q_(&quot;emission nebula&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebCn    :</span><br><span class="line">			wsType = q_(&quot;Cluster associated with nebulosity&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebHII   :</span><br><span class="line">			wsType = q_(&quot;HII region&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebSNR   :</span><br><span class="line">			wsType = q_(&quot;supernova remnant&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebISM   :</span><br><span class="line">			wsType = q_(&quot;interstellar matter&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebEMO   :</span><br><span class="line">			wsType = q_(&quot;emission object&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebBLL   :</span><br><span class="line">			wsType = q_(&quot;BL Lac object&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebBLA   :</span><br><span class="line">			wsType = q_(&quot;blazar&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebMolCld:</span><br><span class="line">			wsType = q_(&quot;molecular cloud&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebYSO   :</span><br><span class="line">			wsType = q_(&quot;young stellar object&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebPossQSO:</span><br><span class="line">			wsType = q_(&quot;possible quasar&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebPossPN:</span><br><span class="line">			wsType = q_(&quot;possible planetary nebula&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebPPN   :</span><br><span class="line">			wsType = q_(&quot;protoplanetary nebula&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebStar  :</span><br><span class="line">			wsType = q_(&quot;star&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebSymbioticStar  :</span><br><span class="line">			wsType = q_(&quot;symbiotic star&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebEmissionLineStar:</span><br><span class="line">			wsType = q_(&quot;emission-line star&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebSNC   :</span><br><span class="line">			wsType = q_(&quot;supernova candidate&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebSNRC  :</span><br><span class="line">			wsType = q_(&quot;supernova remnant candidate&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebGxCl  :</span><br><span class="line">			wsType = q_(&quot;cluster of galaxies&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebPartOfGx  :</span><br><span class="line">			wsType = q_(&quot;part of a galaxy&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebRegion  :</span><br><span class="line">			wsType = q_(&quot;region of the sky&quot;);</span><br><span class="line">			break;</span><br><span class="line">		case NebUnknown:</span><br><span class="line">			wsType = q_(&quot;Unknown&quot;);</span><br><span class="line">			break;</span><br><span class="line">		default:</span><br><span class="line">			wsType = q_(&quot;&quot;);</span><br><span class="line">			break;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">catIds &lt;&lt; QString(&quot;NGC %1&quot;).arg(NGC_nb);</span><br></pre></td></tr></table></figure>
+
+<p>StelQuickStelItem.cpp getSelectedObjectInfo增加其他信息 Extra是class</p>
+<p>StelApp.cpp -</p>
+<p>NebulaMgr.hpp</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">static StelTextureSP texCircle;				// The symbolic circle texture</span><br><span class="line">	static StelTextureSP texCircleLarge;			// The symbolic circle texture for large objects</span><br><span class="line">	static StelTextureSP texRegion;				// The symbolic dashed shape texture</span><br><span class="line">	static StelTextureSP texGalaxy;				// Type 0</span><br><span class="line">	static StelTextureSP texGalaxyLarge;			// Type 0_large</span><br><span class="line">	static StelTextureSP texOpenCluster;			// Type 1</span><br><span class="line">	static StelTextureSP texOpenClusterLarge;		// Type 1_large</span><br><span class="line">	static StelTextureSP texOpenClusterXLarge;	// Type 1_extralarge</span><br><span class="line">	static StelTextureSP texGlobularCluster;		// Type 2</span><br><span class="line">	static StelTextureSP texGlobularClusterLarge;	// Type 2_large</span><br><span class="line">	static StelTextureSP texPlanetaryNebula;		// Type 3</span><br><span class="line">	static StelTextureSP texDiffuseNebula;		// Type 4</span><br><span class="line">	static StelTextureSP texDiffuseNebulaLarge;	// Type 4_large</span><br><span class="line">	static StelTextureSP texDiffuseNebulaXLarge;	// Type 4_extralarge</span><br><span class="line">	static StelTextureSP texDarkNebula;			// Type 5</span><br><span class="line">	static StelTextureSP texDarkNebulaLarge;		// Type 5_large</span><br><span class="line">	static StelTextureSP texOpenClusterWithNebulosity;	// Type 6</span><br><span class="line">	static StelTextureSP texOpenClusterWithNebulosityLarge;	// Type 6_large</span><br></pre></td></tr></table></figure>
+
+<p>StelObject.hpp</p>
+<p>Nebula.hpp</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">  static StelTextureSP texCircle;				// The symbolic circle texture</span><br><span class="line">      static StelTextureSP texCircleLarge;			// The symbolic circle texture for large objects</span><br><span class="line">      static StelTextureSP texRegion;				// The symbolic dashed shape texture</span><br><span class="line">      static StelTextureSP texGalaxy;				// Type 0</span><br><span class="line">      static StelTextureSP texGalaxyLarge;			// Type 0_large</span><br><span class="line">      static StelTextureSP texOpenCluster;			// Type 1</span><br><span class="line">      static StelTextureSP texOpenClusterLarge;		// Type 1_large</span><br><span class="line">      static StelTextureSP texOpenClusterXLarge;	// Type 1_extralarge</span><br><span class="line">      static StelTextureSP texGlobularCluster;		// Type 2</span><br><span class="line">      static StelTextureSP texGlobularClusterLarge;	// Type 2_large</span><br><span class="line">      static StelTextureSP texPlanetaryNebula;		// Type 3</span><br><span class="line">      static StelTextureSP texDiffuseNebula;		// Type 4</span><br><span class="line">      static StelTextureSP texDiffuseNebulaLarge;	// Type 4_large</span><br><span class="line">      static StelTextureSP texDiffuseNebulaXLarge;	// Type 4_extralarge</span><br><span class="line">      static StelTextureSP texDarkNebula;			// Type 5</span><br><span class="line">      static StelTextureSP texDarkNebulaLarge;		// Type 5_large</span><br><span class="line">      static StelTextureSP texOpenClusterWithNebulosity;	// Type 6</span><br><span class="line">      static StelTextureSP texOpenClusterWithNebulosityLarge;	// Type 6_large</span><br><span class="line">      </span><br><span class="line">    ---</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    	NebGx			= 0,		//!&lt; m Galaxy</span><br><span class="line">NebAGx			= 1,  	//!&lt; Active galaxy</span><br><span class="line">NebRGx			= 2,		//!&lt; m Radio galaxy</span><br><span class="line">NebIGx			= 3,		//!&lt; Interacting galaxy</span><br><span class="line">NebQSO			= 4,		//!&lt; Quasar</span><br><span class="line">NebCl			= 5,		//!&lt; Star cluster</span><br><span class="line">NebOc			= 6,		//!&lt; Open star cluster</span><br><span class="line">NebGc			= 7,		//!&lt; Globular star cluster, usually in the Milky Way Galaxy</span><br><span class="line">NebSA			= 8,		//!&lt; Stellar association</span><br><span class="line">NebSC			= 9,		//!&lt; Star cloud</span><br><span class="line">NebN			= 10,	//!&lt; A nebula</span><br><span class="line">NebPn			= 11,	//!&lt; Planetary nebula</span><br><span class="line">NebDn			= 12,	//!&lt; Dark Nebula</span><br><span class="line">NebRn			= 13,	//!&lt; Reflection nebula</span><br><span class="line">NebBn			= 14,	//!&lt; Bipolar nebula</span><br><span class="line">NebEn			= 15,	//!&lt; Emission nebula</span><br><span class="line">NebCn			= 16,	//!&lt; Cluster associated with nebulosity</span><br><span class="line">NebHII			= 17,	//!&lt; HII Region</span><br><span class="line">NebSNR			= 18,	//!&lt; Supernova remnant</span><br><span class="line">NebISM			= 19,	//!&lt; Interstellar matter</span><br><span class="line">NebEMO			= 20,	//!&lt; Emission object</span><br><span class="line">NebBLL			= 21,	//!&lt; BL Lac object</span><br><span class="line">NebBLA			= 22,	//!&lt; Blazar</span><br><span class="line">NebMolCld	        = 23, 	//!&lt; Molecular Cloud</span><br><span class="line">NebYSO			= 24, 	//!&lt; Young Stellar Object</span><br><span class="line">NebPossQSO		= 25, 	//!&lt; Possible Quasar</span><br><span class="line">NebPossPN		= 26, 	//!&lt; Possible Planetary Nebula</span><br><span class="line">NebPPN			= 27, 	//!&lt; Protoplanetary Nebula</span><br><span class="line">NebStar			= 28, 	//!&lt; Star</span><br><span class="line">NebSymbioticStar	= 29, 	//!&lt; Symbiotic Star</span><br><span class="line">NebEmissionLineStar	= 30, 	//!&lt; Emission-line Star</span><br><span class="line">NebSNC			= 31, 	//!&lt; Supernova Candidate</span><br><span class="line">NebSNRC			= 32, 	//!&lt; Supernova Remnant Candidate</span><br><span class="line">NebGxCl			= 33,	//!&lt; Cluster of Galaxies</span><br><span class="line">NebPartOfGx		= 34,	//!&lt; Part of a Galaxy</span><br><span class="line">NebRegion		= 35,	//!&lt; Region of the sky</span><br><span class="line">NebUnknown		= 36		//!&lt; m Unknown type, catalog errors, &quot;Unidentified Southern Objects&quot; etc.</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>listMatchingObjectsI18n</p>
+<p>汉化中文星表</p>
+<p>init里，registerStelObjectMgr增加objectsModule</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">StelObjectP StelObjectMgr::searchByNameI18n(const QString &amp;name) const</span><br><span class="line">&#123;</span><br><span class="line">	StelObjectP rval;</span><br><span class="line">	foreach (const StelObjectModule* m, objectsModule)</span><br><span class="line">	&#123;</span><br><span class="line">		rval = m-&gt;searchByNameI18n(name);</span><br><span class="line">		if (rval)</span><br><span class="line">			return rval;</span><br><span class="line">	&#125;</span><br><span class="line">	return rval;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//! Find any kind of object by its standard program name</span><br><span class="line">StelObjectP StelObjectMgr::searchByName(const QString &amp;name) const</span><br><span class="line">&#123;</span><br><span class="line">	StelObjectP rval;</span><br><span class="line">	foreach (const StelObjectModule* m, objectsModule)</span><br><span class="line">	&#123;</span><br><span class="line">		rval = m-&gt;searchByName(name);</span><br><span class="line">		if (rval)</span><br><span class="line">			return rval;</span><br><span class="line">	&#125;</span><br><span class="line">	return rval;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在卫星Satellites、StarMgr里面两个搜索函数里只返回一个目标 return result;</p>
+<p>ssystem_major.ini：行星</p>
+<p>ssystem_minor.ini：小行星和彗星</p>
+<p>其他搜索函数：SolarSystem</p>
+<p>ConstellationMgr</p>
+<p>maxNbItem是寻找标识</p>
+<p>Nebula.hpp增加信息项；信息项输入；信息项输出；搜索信息</p>
+<p>englishName 英文名（单个著名的名字/自定义星表编号:首个名字）</p>
+<p>nameI18 中文（翻译自englishName）===updateI18n 更新名字展示标签{nameI18 = trans.qtranslate(englishName);}</p>
+<p>nickName：不被承认的一般名字</p>
+<p>Other_nb：交叉认证</p>
+<p>NumStars</p>
+<p>BrstStarMag</p>
+<p>AmatuerIndex</p>
+<p>SilasNote</p>
+<p>切换到ngc2000.dat加载：M_nb C_nb</p>
+<p>englishName用文本加载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if (nebula_data_format==&quot;short&quot;)&#123;</span><br><span class="line">     in &gt;&gt; isIc &gt;&gt; nb &gt;&gt; ra &gt;&gt; dec &gt;&gt; mag &gt;&gt; SizeMaxDegree &gt;&gt; type;</span><br><span class="line"> &#125;</span><br><span class="line"> else&#123;</span><br><span class="line">     in &gt;&gt; englishName &gt;&gt; M_nb &gt;&gt; C_nb &gt;&gt; NGC_nb &gt;&gt; IC_nb &gt;&gt; Other_nb  &gt;&gt; ra &gt;&gt; dec &gt;&gt; type  &gt;&gt; typeClass &gt;&gt; mag &gt;&gt;bmag&gt;&gt;bV&gt;&gt; SizeMaxDegree &gt;&gt;SizeMinDegree&gt;&gt;surfBright&gt;&gt; posAngle &gt;&gt;dsp ;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>NGC_desp 55</p>
+<p>note 86</p>
+<p>StelObject：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">enum InfoStringGroupFlags</span><br><span class="line">&#123;</span><br><span class="line">	Name			= 0x00000001, //!&lt; An object&apos;s name</span><br><span class="line">	CatalogNumber		= 0x00000002, //!&lt; Catalog numbers</span><br><span class="line">	Magnitude		= 0x00000004, //!&lt; Magnitude related data</span><br><span class="line">	RaDecJ2000		= 0x00000008, //!&lt; The equatorial position (J2000 ref)</span><br><span class="line">	RaDecOfDate		= 0x00000010, //!&lt; The equatorial position (of date)</span><br><span class="line">	AltAzi			= 0x00000020, //!&lt; The position (Altitude/Azimuth)</span><br><span class="line">	Distance		= 0x00000040, //!&lt; Info about an object&apos;s distance</span><br><span class="line">	Size			= 0x00000080, //!&lt; Info about an object&apos;s size</span><br><span class="line">	Extra			= 0x00000100, //!&lt; Derived class-specific extra fields</span><br><span class="line">	PlainText		= 0x00000200, //!&lt; Strip HTML tags from output</span><br><span class="line">	HourAngle		= 0x00000400, //!&lt; The hour angle + DE (of date)</span><br><span class="line">	AbsoluteMagnitude	= 0x00000800, //!&lt; The absolute magnitude</span><br><span class="line">	GalacticCoord		= 0x00001000, //!&lt; The galactic position</span><br><span class="line">       Type			= 0x00002000,  //!&lt; The type of the object (star, planet, etc.)</span><br><span class="line"></span><br><span class="line">	SizeMin			= 0x00004000,</span><br><span class="line">       bmag1			= 0x00008000,  //!&lt; The type of the object (star, planet, etc.)</span><br><span class="line">       bV1			= 0x00010000,  //!&lt; The type of the object (star, planet, etc.)</span><br><span class="line">       surfBright1			= 0x00020000,  //!&lt; The type of the object (star, planet, etc.)</span><br><span class="line">       posAngle1			= 0x00040000,  //!&lt; The type of the object (star, planet, etc.)</span><br><span class="line">       nickName1			= 0x00080000,  //!&lt; The type of the object (star, planet, etc.)</span><br><span class="line">	otherID1			= 0x00100000,</span><br><span class="line">       dsp1			= 0x00200000  //!&lt; The type of the object (star, planet, etc.)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>1.expand catalog（显示信息）</p>
+<p>2.修改type</p>
+<p>3.完成data</p>
+<p>中文星：skyculture</p>
+<p>Nebula::drawLabel</p>
+<p>星座连线</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ultrapre.github.io/2020/09/13/2020-09-13-修改手机Stellarium/" data-id="cllwi8u2c004ty8wfmflyxold" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/天文/">天文</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/09/14/2020-09-14-1,001里面著名非NI深空/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          1,001里面著名非NI深空
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/09/10/2020-09-10-数据库/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">数据库</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Galgame/">Galgame</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/天文/">天文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/宫崎骏/">宫崎骏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/手机/">手机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据/">数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统/">系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件/">软件</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Galgame/" style="font-size: 18.33px;">Galgame</a> <a href="/tags/天文/" style="font-size: 20px;">天文</a> <a href="/tags/宫崎骏/" style="font-size: 16.67px;">宫崎骏</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/数据/" style="font-size: 11.67px;">数据</a> <a href="/tags/系统/" style="font-size: 13.33px;">系统</a> <a href="/tags/软件/" style="font-size: 15px;">软件</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/28/2020-12-28-夜观南天金糖果——侏儒星云/">夜观南天金糖果——侏儒星云</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/25/2020-09-25-星云摄影板校验/">星云摄影板校验</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/15/2020-09-15-彗星/">彗星</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/2020-09-14-年轻恒星/">年轻恒星</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/2020-09-14-1,001里面著名非NI深空/">1,001里面著名非NI深空</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 Akari Sama<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/clip/" class="mobile-nav-link">收藏</a>
+  
+    <a href="/bgm.tv/index.html" class="mobile-nav-link">黄油库</a>
+  
+    <a href="/www.mmgal.com" class="mobile-nav-link">汉化</a>
+  
+    <a href="/www.2dfan.com" class="mobile-nav-link">攻略</a>
+  
+    <a href="/plumz.me/index.html" class="mobile-nav-link">赏析</a>
+  
+    <a href="/tags/Galgame" class="mobile-nav-link">感想</a>
+  
+    <a href="/blog.ztjal.info/index.html" class="mobile-nav-link">解包</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

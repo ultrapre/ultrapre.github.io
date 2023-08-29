@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>反差指数计算 | </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="反差指数计算 喻园 1234567891011121314151617181920212223242526272829303132333435363738394041424344import math&amp;lt;!--more--&amp;gt;# 修正issue与公式来源# https://github.com/Stellarium/stellarium/issues/1145# 根据你的环境设置NELM：">
+<meta name="keywords" content="天文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="反差指数计算">
+<meta property="og:url" content="http://ultrapre.github.io/2020/07/30/2020-07-30-反差指数计算/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="反差指数计算 喻园 1234567891011121314151617181920212223242526272829303132333435363738394041424344import math&amp;lt;!--more--&amp;gt;# 修正issue与公式来源# https://github.com/Stellarium/stellarium/issues/1145# 根据你的环境设置NELM：">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2023-08-29T16:02:46.588Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="反差指数计算">
+<meta name="twitter:description" content="反差指数计算 喻园 1234567891011121314151617181920212223242526272829303132333435363738394041424344import math&amp;lt;!--more--&amp;gt;# 修正issue与公式来源# https://github.com/Stellarium/stellarium/issues/1145# 根据你的环境设置NELM：">
+  
+    <link rel="alternate" href="/atom.xml" title type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/myfavicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo"></a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/clip/">收藏</a>
+        
+          <a class="main-nav-link" href="/bgm.tv/index.html">黄油库</a>
+        
+          <a class="main-nav-link" href="/www.mmgal.com">汉化</a>
+        
+          <a class="main-nav-link" href="/www.2dfan.com">攻略</a>
+        
+          <a class="main-nav-link" href="/plumz.me/index.html">赏析</a>
+        
+          <a class="main-nav-link" href="/tags/Galgame">感想</a>
+        
+          <a class="main-nav-link" href="/blog.ztjal.info/index.html">解包</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://ultrapre.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2020-07-30-反差指数计算" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/30/2020-07-30-反差指数计算/" class="article-date">
+  <time datetime="2020-07-30T09:28:00.000Z" itemprop="datePublished">2020-07-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      反差指数计算
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>反差指数计算</p>
+<p>喻园</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修正issue与公式来源</span></span><br><span class="line"><span class="comment"># https://github.com/Stellarium/stellarium/issues/1145</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据你的环境设置NELM：</span></span><br><span class="line"><span class="comment"># ! Class 1 = NELM 7.6-8.0; average NELM is 7.8</span></span><br><span class="line"><span class="comment"># ! Class 2 = NELM 7.1-7.5; average NELM is 7.3</span></span><br><span class="line"><span class="comment"># ! Class 3 = NELM 6.6-7.0; average NELM is 6.8</span></span><br><span class="line"><span class="comment"># ! Class 4 = NELM 6.1-6.5; average NELM is 6.3</span></span><br><span class="line"><span class="comment"># ! Class 5 = NELM 5.6-6.0; average NELM is 5.8</span></span><br><span class="line"><span class="comment"># ! Class 6 = NELM 5.1-5.5; average NELM is 5.3</span></span><br><span class="line"><span class="comment"># ! Class 7 = NELM 4.6-5.0; average NELM is 4.8</span></span><br><span class="line"><span class="comment"># ! Class 8 = NELM 4.1-4.5; average NELM is 4.3</span></span><br><span class="line"><span class="comment"># ! Class 9 = NELM 4.0</span></span><br><span class="line"><span class="comment"># ! @arg idx Bortle Scale Index (valid: 1..9, will be forced to valid range)</span></span><br><span class="line">NELM = <span class="number">7.3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入：深空天体的星等、长轴与短轴（arcsec）</span></span><br><span class="line"><span class="comment"># 输出：深空天体的反差指数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calContrastIndex</span><span class="params">(mag, majorAxisSize, minorAxisSize)</span>:</span></span><br><span class="line">    <span class="comment"># // Compute an extended object's contrast index: http://www.unihedron.com/projects/darksky/NELM2BCalc.html</span></span><br><span class="line">    <span class="comment"># 	// Sky brightness</span></span><br><span class="line">    <span class="comment"># 	// Source: Schaefer, B.E. Feb. 1990. Telescopic Limiting Magnitude. PASP 102:212-229</span></span><br><span class="line">    <span class="comment"># 	// URL: http://adsbit.harvard.edu/cgi-bin/nph-iarticle_query?bibcode=1990PASP..102..212S [1990PASP..102..212S]</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getSurfaceBrightnessWithExtinction</span><span class="params">(mag, majorAxisSize, minorAxisSize)</span>:</span></span><br><span class="line">        sq = <span class="number">3600</span> * <span class="number">3600</span></span><br><span class="line">        <span class="comment"># arcsec^2 or arcmin^2</span></span><br><span class="line">        <span class="keyword">if</span> minorAxisSize == <span class="number">0</span>:</span><br><span class="line">            SurfaceArea = math.pi * (majorAxisSize / <span class="number">2</span>) * (majorAxisSize / <span class="number">2</span>)  <span class="comment"># S = pi*R^2 = pi*(D/2)^2</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            SurfaceArea = math.pi * (majorAxisSize / <span class="number">2</span>) * (minorAxisSize / <span class="number">2</span>)  <span class="comment"># S = pi*a*b</span></span><br><span class="line">        <span class="keyword">if</span> mag &lt; <span class="number">99</span> <span class="keyword">and</span> majorAxisSize &gt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> mag + <span class="number">2.5</span> * math.log10(SurfaceArea * sq)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">99</span></span><br><span class="line">    B_mpsas = <span class="number">21.58</span> - <span class="number">5</span> * math.log10(math.pow(<span class="number">10</span>, <span class="number">1.586</span> - NELM * <span class="number">0.2</span>) - <span class="number">1</span>)</span><br><span class="line">    <span class="comment"># // Compute an extended object's contrast index</span></span><br><span class="line">    <span class="comment">#	// Source: Clark, R.N., 1990. Appendix E in Visual Astronomy of the Deep Sky, Cambridge University Press and Sky Publishing.</span></span><br><span class="line">    <span class="comment">#	// URL: http://www.clarkvision.com/visastro/appendix-e.html</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-0.4</span> * (getSurfaceBrightnessWithExtinction(mag,majorAxisSize,minorAxisSize) - B_mpsas)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://ultrapre.github.io/2020/07/30/2020-07-30-反差指数计算/" data-id="cllwi8a3m001ry8wf2adlqmng" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/天文/">天文</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/08/02/2020-08-02-解析船底座大星云/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          解析船底座大星云
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/29/2020-07-29-星云准备/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">星云准备</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Galgame/">Galgame</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/天文/">天文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/宫崎骏/">宫崎骏</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/手机/">手机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据/">数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/系统/">系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/软件/">软件</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Galgame/" style="font-size: 18.33px;">Galgame</a> <a href="/tags/天文/" style="font-size: 20px;">天文</a> <a href="/tags/宫崎骏/" style="font-size: 16.67px;">宫崎骏</a> <a href="/tags/手机/" style="font-size: 10px;">手机</a> <a href="/tags/数据/" style="font-size: 11.67px;">数据</a> <a href="/tags/系统/" style="font-size: 13.33px;">系统</a> <a href="/tags/软件/" style="font-size: 15px;">软件</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/28/2020-12-28-夜观南天金糖果——侏儒星云/">夜观南天金糖果——侏儒星云</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/25/2020-09-25-星云摄影板校验/">星云摄影板校验</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/15/2020-09-15-彗星/">彗星</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/2020-09-14-年轻恒星/">年轻恒星</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/2020-09-14-1,001里面著名非NI深空/">1,001里面著名非NI深空</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 Akari Sama<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/clip/" class="mobile-nav-link">收藏</a>
+  
+    <a href="/bgm.tv/index.html" class="mobile-nav-link">黄油库</a>
+  
+    <a href="/www.mmgal.com" class="mobile-nav-link">汉化</a>
+  
+    <a href="/www.2dfan.com" class="mobile-nav-link">攻略</a>
+  
+    <a href="/plumz.me/index.html" class="mobile-nav-link">赏析</a>
+  
+    <a href="/tags/Galgame" class="mobile-nav-link">感想</a>
+  
+    <a href="/blog.ztjal.info/index.html" class="mobile-nav-link">解包</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
